@@ -18,13 +18,24 @@ function draw() {
  // Si el número és 0,33 de volum es convertira en 100 de "h" o alçada de la boca o arc.
  // Si el número és 0,67 de volum es convertira en 200 de "h" o alçada de la boca o arc.
  background(127);
- fill(255,223,196);
+ fill(1,223,196);
  ellipse(300,200,220,300);
- fill(81,209,246);
+  ellipse(180,175,40,80);
+   ellipse(420,175,40,80);
+  ellipse(300,200,220,300);
+ fill(255,255,255);
  ellipse(250,150,50,30);
  ellipse(350,150,50,30);
- fill(2550,0)
- arc(300,250,120,h,0,PI); // La variable "h" determina la alçada de la boca 
+  fill(700,0,0)
+  ellipse(255,150,14,29)
+  ellipse(345,150,14,29)
+ fill(200,0,0)
+ arc(300,230,100,150,0,PI);
+  fill(0,0,0)
+  arc(250,120,50,10,PI,0)
+   arc(350,115,50,30,PI,0)
+   arc(300,215,130,50,PI,0)
+   arc(300,80,130,100,PI,0)
  console.log(mic);
  console.log(vol);
  console.log(h);
