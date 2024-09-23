@@ -30,3 +30,4 @@ function draw() {
  console.log(h);
  // El "console.log" ens serveixen per veure el valor de les variables en cada moment
  //
+}
