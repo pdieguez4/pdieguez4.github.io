@@ -294,7 +294,19 @@ canvas{
         ctx.lineTo(x1_screen, y1_screen);
         /*Això vol dir dibuixa una linia des de el centre del canvas, que és l'inici del primer braç fins a la posició
         x1_screen i y1_screen */
-        
+        ctx.strokeStyle='blue';
+        /*strokeStyle indica el color de la linia,en aquest cas blau pel primer braç*/
+        ctx.lineWidht='S';
+        /*lineWidht és l'amplada de la lini en píxels, en aquest cas 5pxde gruix*/
+        ctx.stroke();
+        /*stroke es una funció, se que ésuna funcio perqué te doble parèntesis no hi ha paràmetres, amb aquesta funció aconsegeuix dibuixar la linia al canvas*/
+        /*A partir d'aqui dibuixem el segon braç i el vull verd amb 5px de gruix*/
+        ctx.beginPath();//Com té 2 parèntesis també és una funció
+        ctx.moveTo(xl_screen,y1_screen);//Ara posemque comencial final del primer braç perquèés l'inici del segon braç
+        ctx.lineTo(x2_screen,y2_screen);//Ara la linia no pot anar a x1_screen, y1_screen(surt d'aqui) , així que posem que vagi cap a x2_screen, y1_screen ue és el final del segon braç
+           ctx.strokeStyle='green';
+        ctx.lineWidth='5';
+        ctx.stroke();
     </script>
     <p>Em dic Pedro i sóc alumne de programació i robòtica de 1r de batxillerat tecnològic de <a href="https://agora.xtec.cat/ies-pompeu-fabra-martorell/">l'institut Pompeu Fabra</a></p>
     <p>A continuació veuràs un llistat amb diferents projectes que farem durant el curs:</p>
