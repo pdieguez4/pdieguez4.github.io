@@ -1,8 +1,12 @@
 function setup() {
+  mic=new p5.AudioIn();
   createCanvas(400, 400);
+  mic.start();
 }
 
 function draw() {
+  let vol=mic.getLevel();
+  let h= map(vol,0,1,0,5)
   background(220);
   beginShape();
   vertex(20,50)
@@ -10,11 +14,11 @@ function draw() {
   vertex(70,65)
   vertex(80,60)
   vertex(85,61)
-  vertex(100,61)
-  vertex(95,63)
-  vertex(85,64)
-  vertex(84,68)
-  vertex(83,80)
+  vertex(100,61+h)
+  vertex(85,66)
+  vertex(85,66)
+  vertex(100,65-h)
+  vertex(85,83)
   vertex(81,90)
   vertex(75,100)
   vertex(65,105)
