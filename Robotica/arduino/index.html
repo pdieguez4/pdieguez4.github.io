@@ -1,25 +1,96 @@
+<html>
+  <head>
+    <style>
+      table{ 
+        width: 50%; // Ocupa el 50% de l'amplada de la pàgina
+        border-collapse: collapse; // Evita que apareixin dobles linies a les cel·les 
+        margin: 20px auto; // Marge de 20px a la part superior i centra la taula
+      }
+      th,td{
+        border: 1px solid #ddd; // Afegeix una vora fina d'un píxel de color gris clar al voltant de totes les cel·les (th i td).
+        padding: 10px;  // Espai intern dins de cada cel·la, per fer-la més llegible.
+        text-align: center // Centrar el text dins de cada cel·la. 
+        } 
+      thead{
+          background: #f4f4f4;  // Canvia el color del fons del thead a gris clar.
+          font-weight: bold;  // Fa que la capçalera de la taula estigui en negreta.
+          }
+       tr: nth-child(even){  // És una pseudoclasse aplicada a tr segons si es parell o imparell, even és parell i odd és imparell.
+          background-color: #f9f9f9;
+          }
+       tr: hover{  // És una pseudoclasse hover per quan passo per sobre amb el ratolí pel contingut de la taula és fa més fosc.
+        background-color: #e2e2e2;  
+      }
+          
+      
+    </style>
+  </head>
 <h1>Conceptes generals de microcontroladors</h1>
-<p>Els diferents microcontroladors tenen en comú els seguents aspectes:</p>
+<p>Els diferents microcontroladors tenen en comú els següents aspectes: </p>
 <ul>
-  <li>Tipus d'entrades i sortides: el microcontrolador te un processador tipus AVR o  Expressif on es  conecta entrades digitals, entrades analogiques, sortides digital i sortides analogiques</li>
-  <li>Les entrades i sortides digitals només funcionen amb 0 o 1 es a dir codi binari, 0 significa 0 volts i 1 pot significar 5 volts o 3,3 volts depenent del microcontrolador i el  pin que utilitzem. A aquestes entrades podem connectar, per exemple, interruptors, sensor "foscor/claror" </li>
+  <li> Tipus d'entrades i sortides: el microcontrolador té un processador tipus "AVR" o "Espressif", 
+  on es connecten entrades digitals, entrades analògiques, sortides digitals i sortides analògiques</li>
+  <li>Les entrades i sortides digitals només funcionen amb zeros o uns, és a dir, codi binari. Zero significa 0 volts
+  i 1 pot significar 5 volts 3,3 volts depenent del microcontrolador i el pin que utilitzem.
+  Aquestes entrades hi podem connectar per exemple interruptors, sensor foscor/claror</li>
 </ul>
-<h2>Sortides analògiques tipus PWM</h2>
-<p>PWM significa modulació de l'ample de banda, en anglès <i>Pulse Width Modulation</i> i és una forma
-d'aconseguir una sortida analògica a partir de diverses sortides digitals, molt ràpides.</p>
-<p>PWM es representa amb el símbol "~" tal com podem veure a la imatge següent d'un Arduino Uno</p>
-<img src="arduinouno.jpg" width="600" height="400">
-<p>Més amunt podem veure que els pins números 3, 5, 6, 9, 10 i 11.</p>
-<p>Aquests PWM són sortides analògiques de 8 bits, en el cas de Arduino Uno Rev3, d'acord amb el
-  <a href="https://store.arduino.cc/en-es/products/arduino-uno-rev3"> fabricant</a>, mentres en el cas
-d'Arduino Uno Rev4 és de 12 bits, segons el 
-  <a href="https://docs.arduino.cc/resources/datasheets/ABX00080-datasheet.pdf"> fabricant</a>  que l'anomena DAC, que vol dir Digital Analog 
-  Converter</p>
-<p>Tenir 8 o 12 bits en un convertidor digital analògic o DAC tipus PWM fa que tinguem 2<sup>8</sup>
-  o 2<sup>10</sup> nivells diferents de corrent, es a dir 256 nivells diferents o 2048 nivells  diferents</p>
-<p>Suposem que tant Arduino Uno Rev3 o Rev4 poden donar 5 volts com a màxim. Quina seria la resolució en milivolts
-de cada Arduino?</p>
+<h2>Sortides analògiques tipus PwM</h2>
+<P>PwM significa "modulació de l'ample en banda", en anglès, <i>"Pulse Width Modulation"</i> i
+és una forma d'aconseguir una sortida analògica a partir de diverses sortides digitals, molt ràpides.</P>
+
+<p>PwM és representa amb el símbol "~" tal com podem veure a la imatge següent d'un Arduino Uno</p>
+<img src = "arduinouno.jpg" width = "600" height = "400">
+
+<p>Més amunt podem veure que els pins número 3, 5, 6, 9, 10 i 11</p>
+<p>Aquests PwM són sortides analògiques de 8 bits, en el cas de Arduino Uno Rev3, d'acord amb el 
+  <a href = ""> fabricant </a>, mentres que en el cas d'Arduino Uno Rev4 és de 12 bits, segons
+el fabricant que l'anomena DAC, que vol dir "Digital Analog Converter"</p>
+<p>Tenir 8 o 12 bits en un convertidor digital analògic o DAC tipus PwM fa que tinguem 2<sup>8</sup> o 2<sup>10</sup>
+nivells diferents de corrent, és a dir, 256 nivells diferents o 2048 nivells diferents</p>
+<p>Suposem que tant Arduino Uno Rev3 o Rev4 poden donar 5 volts com a màxim. Quina seria la resolució
+en milivolts de cada Arduino?</p>
 <p>5 volts dividit entre 256 dona 0.01953125 volts= 19,53125 milivolts per Arduino Uno Rev3</p>
 <p>5 volts dividit entre 2048 dona 0.00244140625 volts= 2,44140625 milivolts per Arduino Uno Rev4</p>
+<p>Els milivolts anteriors són la resolució que aconseguim. Imaginem que volem regular la intensitat d'un LED
+amb una Arduino Uno Rev3 aconseguim menys fluid i amb graons més grans, és a dir, canvis més bruscs perquè 256 canvis
+són menys que 2048 volts. A continuació veurem una imatge que representa com combinant moltes senyals digitals ràpidament
+sembla que generem un senyal analògic, això és la base del PwM</p>
 
-</body></html>
+<table>
+  <thead>
+    <tr>
+      <th>PINS DE SORTIDA</th><th>FREQÜÈNCIA PWM</th>
+      
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>PINS 3, 9, 10, i 11</td>
+      <td>490hz</td>
+    </tr>
+    <tr>
+     <td>PINS 5 i 6</td>
+      <td>976hz</td> 
+    </tr>
+  </tbody>
+</table>
+<p>Nota: la taula HTML anterior té una capçalera com un document HTML, però és diu thead, en comptes de head i es la primera filera de la taula.
+Té un cos anomenat tbody, en comptes de body i és la resta de la taula. 
+La taula la defineix el tag table que agrupa thead i tbody. Totes les fileres tant del thead com el tbody es defineixen amb el tag tr, 
+que vol dir table row.
+Dintre de thead hi ha elements individuals que són cel·les que pertanyen a la primera filera 
+i s'anomenen th o table heading. 
+En el table body hi ha també fileres tr però dintre d'aquestes fileres els elements individuals han de ser td,
+que significa table data. Per últim, s'han de tancar el table o el body. Tots aquests elements es poden
+modificar amb CSS i fer la taula amb un estil propi</p>
+
+<p>Les freqüències baixes produeixen soroll en els motors. Per tant, és preferible connectar motors als pins 5 i 6.</p>
+<p>La freqüència és la inversa del període, 976Hz o cicles per segon correspon a un període de 1/976 segons, que són 1,024 milisegons.</p>
+  
+<h2>Convertidor analògic - digital</h2>
+  <p>Apliquem el teorema de Nyquist que diu que hem de fer el doble de mostres com a mínim que la freqüencia màxima per aconseguir convertir
+  un senyal contínu analògic en un senyal digital mostrejat segons la figura següent</p>
+
+  <img src="adc.png">
+</body>
+</html>
