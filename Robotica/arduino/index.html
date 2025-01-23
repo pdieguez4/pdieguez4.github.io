@@ -1,4 +1,6 @@
-<div class="content-container">
+<!DOCTYPE html>
+<html lang="en">
+        <div class="content-container">
         <h1>Conceptes generals de microcontroladors</h1>
         <p>Els diferents microcontroladors tenen en comú els següents aspectes:</p>
     <ul>
@@ -121,10 +123,22 @@
                     //ADC és Analog Digital converter, és a dir que convertim un valor analògic en digital (convertidor analògic digital)
                     // DAC és Digital Analog Converter, és a dir el contrari que ADC, convertim digital a analògic com el PWM (Pulse Width Modlation) 
                     que vol dir modulació de l'ample de banda
-                    Serial.println(valorADC); // Println significa 
-                    delay(500); //0-4095
+                // D'acord amb el <a src="https://www.espressif.com/sites/default/files/documentation/esp32-s3_datasheet_en.pdf"> datasheet o fulla de caracterísitques de ESP32S3 </a>
+                // Hi ha 20 entrades analògiques de 12 bits mentres que en Arduino Uno hi ha 6 entrades analògiques de
+                10 bits
+                    Serial.println(valorADC); // Println significa que imprimeixi via serial el valor de ADC (0-1023 o 0-4095)
+                    delay(500); //Espera 500 milisegons o mig segons per mostrar el resultat
                 }
             </code></pre>
+        <p>Com podem veure a la foto de més amint d'arduino a la cantonada inferior dreta es troben els 6 ADCs o entrades analògiques amb les 
+        lletres d'A0 fins a A6, i a la part superior de l'arduino podem veure els pins que son els 6 DACs o sortides analògiques de tipus PWM
+        que estan senyalaeds amb ~ (Pins 3, 5, 6, 9, 10, 11).</p>
+        <p>En la imatge següent podem veure un esquema de ESP32S3</p>
+        <img src="esp32s3.webp" width="800" height="600">
+        <p>Podem observar que a diferèndia d'Arduino Uno la gran majoria de pins son GPIO, que significa General Purpose Input Output, en català 
+        Pin d'Entrada i Sortida de Propòsit General, és a dir, que pot tenir moltes utilitats, entrada digital, sortida digital, entrada analògica, 
+        sortida analògica. Si volem veure un esquema dels pins podem escriure "pinout".</p>
+        <p>Alguns pins són RTC</p>
     </div>
 
     <!-- Scripts necessaris -->
@@ -132,10 +146,5 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.8/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
 
-</body>
-</html>
-      
-    </head>
-    
 </body>
 </html>
