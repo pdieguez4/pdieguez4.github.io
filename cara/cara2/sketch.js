@@ -29,6 +29,8 @@ function draw() {
  // Noise és un tipus de soroll anomenat Perlin que va ser famòs perquè va fer videojocs gràcies a les variacions suaus de números aleatoris
  // que fa aquesta funció. Permet fer números pseudoaleatoris propers
   let ales = 10*random(1);
+  let xeye = map(mouseX, 0,600,-10,+10);
+  let yeye = map(mouseY, 0,400,-10,+10);
   background(bgColor);  // Pinta el fons amb el color actual.
 fill(0);
   print(20, 20, "Fotogrames: ", frameCount);
@@ -56,8 +58,8 @@ fill(0);
  ellipse(350,150,50,30);
   //pupiles
   fill(700,0,0)
-  ellipse(255,150,14+h,29)
-  ellipse(345,150,14+h,29)
+  ellipse(255+xeye,150+yeye,14,29)
+  ellipse(345+xeye,150+yeye,14,29)
   //boca
  fill(200,0,0)
  arc(300,230,100,150-h,0,PI);
