@@ -839,6 +839,8 @@ void loop() {
   // al numero 72,i le he de restar la 'A' que equival al número 65, per a tant ch - 'A' és 7 que és el 8é element de l'array
   // de majúscula [7] i letters[7] és "....".
   // Per que s'a de restar?
+  // Per coneixer la posició de la lletra a l'array, perquè hem posat l'array ordenat des de la 'a' fins la 'z' i desde la 'A' fins la 'Z'
+  // Ara tenim el número per exemple letters[7] igual a "...."
   char ch;
   if (Serial.available() > 0) {
     ch = Serial.read();
