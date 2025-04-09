@@ -1,39 +1,67 @@
-
-<!DOCTYPE html>
-<html lang="">
-
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>p5.js example</title>
-  <style>
-    body {
-      padding: 0;
-      margin: 0;
-      background-color: #FFFFFF;
-    }
-  </style>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.10.0/p5.min.js" integrity="sha512-lvddmeF7aHRJwdbJeYThWd5kWSjTrXBzCRF/jYROiHzmhMJ1dEXfGH5Q7ft0yhizXTopAETG03s5ajTflauijA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <!-- <script src="../p5.min.js"></script>-->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.10.0/addons/p5.sound.min.js" integrity="sha512-WzkwpdWEMAY/W8WvP9KS2/VI6zkgejR4/KTxTl4qHx0utqeyVE0JY+S1DlMuxDChC7x0oXtk/ESji6a0lP/Tdg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <!-- <script src="../addons/p5.sound.js"></script> -->
-  <script src="sketch.js"></script>
-</head>
-
-<body>
-  <main>
-    <p>El fons gris està fet amb la instrucció "background" i si i ha un número entre parèntesis és una eescala de grisos i va de 0 a 255. </p>
-    <p>Els números que estàn entre parentesis s'anomenen paràmetres o arguments i la funció backgroun i totes les demès son pròpies de p5.js i no generals de JavaScript.</p>
-    <p>Si en comptes d'un número hi ha dos números e primer és escala de grisos i el segon és transparència.</p>
-    <p>Si hi ha tres números son RGB, que vol dir 255 nivells de "Red" o vermell, 255 nivells de verd o "Green" i 255 nivells de Blue o blau, que fan 255*255*255= 16.700.000 de colors diferents.</p>
-    <p>Si hi ha quatre números son RGB i transparència. Tot l'anterior s'aplica a "background" que dona fons o a "fill" que omple de color la forma a continuació.</p>
-    <p>Per moure els ulls utilitzarem la funció sinus i la funció cosinus que estàn canviant de número de forma no acompassada.</p>
-    <p>Per generar números de forma continua sense parar utilitzam la funció "frameCount", concretament farem:</p>
-    <p>let leftEyeSize = 20+10*cos(frameCount*0,1);//mida variable segons el temps</p>
-    <p>let rightEyeSize = 20+10*sin(frameCount*0,1);//mida variable segons el temps</p>
-    <p>La mida dels ulls va variant entre 10 i 30, ja que la funció "frameCount" va donant números continuamen i el possem per 0,1 perwuè no augmenti tan ràpid. ""frameCount") significa countar fotogrames</p>
-    <p>sinus del que sigui sempre serà entre -1 i +1 i si el multiplico per 10 faarà que varii entre 10 i -10 i la suma de 20 farà aquesta variació</p>
-  </main>
-</body>
-
+<html>
+  <head>
+  </head>
+  <body>
+   <h1> Programació orientada a objectes
+   </h1> 
+    <h2>
+    Introducció
+    </h2>
+    <p>
+      Els llenguatges de programació orientada a objectes són dels més
+      utilitzats: Phyton, JavaScript i C++. En canvi altres llenguatges com C
+      no estan orientats a objectes.
+    </p>
+    <h2>
+      Advantatges de la POO
+    </h2>
+    <ol>
+      <li>
+        <b>Encapsulació</b>: Consisteix en agrupar dades (propietats) i  les funcions
+        s'acostumen a anomenar mètodes que operen sobre les dades anteriors en una única entitat
+        anomenada <b>classe</b>. Té els següents avantatges: la classe queda oculta i només
+        podem interactuar amb l'objecte creat a partir de la classe. És més difícil cometre
+        errors al crear objectes perquè la classe normalment es defineix bé. El codi és més segur
+        perquè només interactuem amb objectes i no amb classes.
+      </li>
+      <li>
+        <b>Reutilització del codi:</b> podem utilitzar la mateixa classe o el mateix objecte en
+        diferents parts del programa o en programes diferents. Les avantatges són: Evita duplicacions
+        del codi. Podem crear moltes instancies diferents de la mateixa classe o objectes amb 
+        facilitats. També puc fer una classe complexa en forma de biblioteca constituïda per una o més
+        classes i utilitzarla en molts programes diferents.
+      </li>
+      <li>
+        <b>Herència:</b> Ens permet crear una classe o subclasse heredant les propietats i els mètodes
+        de una classe existent o de una superclasse. Té l'avantatge d'extendre les propietats i els mètodes
+        d'una superclasse o classe a una subclasse o classe. La nomenclatura pot ser jeràrquica superclasse
+        per sobre de subclasse o heredada: Classe principal i classe heredada de la classe principal. L'avantatge
+        és que evitem escriure codi redundant i no repetir un codi quan volem o variar les funcions d'una classe
+      </li>
+      <li>
+        <b>Polimorfisme:</b> Permet crear objectes diferents a partir de la mateixa classe, per exemple variant elss
+        arguments. L'avantatge és que puc crear objectes diferents variant els arguments o cridant diferents mètodes
+        de la classe a cada objecte.
+      </li>
+      <li>
+        <b>Mantenibilitat:</b> El codi creat per classes és més fàcil de mantenir perquè cada classe té una responsabilitat
+        específica. Si tenim el codi separat en classes, podem trobar els errors amb més facilitat.
+      </li>
+      <li>
+        <b>Escalabilitat:</b> El projecte és més escalable, vol dir que es pot fer més gran i complex perquè podem afegir
+        noves funcionalitats sense afectar al codi existent. 
+      </li>
+      <li>
+        <b>Modularitat:</b> El codi dividit en classes permet que diferents equips de desenvolupament treballin en classes o
+        mòduls diferents i independents que posteriorment en ser mòduls independents poden combinar-se entre si.
+      </li>
+      <li>
+        <b>Abstracció:</b> Permet fer més clar el codi perquè oculta els detalls interns de la complexitats.
+      </li>
+      <li>
+        <b>Organització:</b> Permet tenir el codi més ordenat i més llegible per altres programadors facilitant el manteniment
+        a llarg termini i la documentació
+      </li>
+    </ol>
+  </body>
 </html>
