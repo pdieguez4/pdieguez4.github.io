@@ -841,7 +841,8 @@ void loop() {
   // Per que s'a de restar?
   // Per coneixer la posició de la lletra a l'array, perquè hem posat l'array ordenat des de la 'a' fins la 'z' i desde la 'A' fins la 'Z'
   // Ara tenim el número per exemple letters[7] igual a "...."
-    //soy marticon y soy mariquita 
+    
+
   char ch;
   if (Serial.available() > 0) {
     ch = Serial.read();
@@ -881,6 +882,7 @@ void flashDotOrDash(char dotOrDash) {
   digitalWrite(ledPin, LOW);    
   delay(dotDelay); // gap between flashes
 }
+      <p> El ESP 32-52 té l'avantatge detenir més resolució, es a dir, pot donar 16384 valors diferents entre 0-3,3 volts Aixxò pot que no es noti en un led, però es nota en un motor, on l'ESP32  permet accedir a més velocitats diferents. El motors   </p>
         <!-- Scripts necessaris -->
 
         <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
