@@ -883,7 +883,37 @@ void flashDotOrDash(char dotOrDash) {
   delay(dotDelay); // gap between flashes
 }
       <p> El ESP 32-52 té l'avantatge detenir més resolució, es a dir, pot donar 16384 valors diferents entre 0-3,3 volts Aixxò pot que no es noti en un led, però es nota en un motor, on l'ESP32  permet accedir a més velocitats diferents. El motors   </p>
-        <!-- Scripts necessaris -->
+        const int outputPin = 3;
+
+void setup() {
+  pinMode(outputPin, OUTPUT);
+  Serial.begin(9600); // Comença la comunicació serie USB entre arduino i l'ordinador a 9600 (són 9600 símbols per segon)
+      l'objecte Serial és de la classe serial i li apliquem amb la sintaxi del punt el metode begin que té com a parametre o argument
+    un numero enter que correspondra als bauds
+  Serial.println("Enter Volts 0 to 5"); //Demana que el usuari que entri per la consola o serial monitor del ARDUINO IDE
+      un numero entre 0 i 5 
+      //Println siginifa imprimeix una linea i li apliquem en la sintaxis del punt a la clase serial pot rebre diversos paramatres, si els
+      posem entre cometes s'escriu tal cual i si no, escriu el valor de la variable.
+
+void loop() { //És un sistema que no s'atura mai, es repeteix fins que desconecto el arduino
+  if (Serial.available() > 0) { //Serial.available és un mètode que espera caràcters, major a 0 és que hi ha un caràcter
+    float volts = Serial.parseFloat(); //parseFloat és una funció o mètode que s'aplica a l'objecte serial i la seva funció és parsejar o 
+    //analitzar el contingut de caràcters que arriba per port serial i si és de tipus decimal o floating point number(numero amb coma flotant)
+    // o variable tipo float. Les variables float inclouen les variable int o integer o numeros sencers. També existeix parseInt que només
+    // acceptaria numeros enters. 
+    // Volts emmagatzema el numero decimal que escriu el usuari
+    //El float volts que fa? Crea un espai a la memoria del ordinador anomenat volts que haura de ser del tipus floating point number que 
+    // emmagatzemara el que li arribi del port serial escrit per l'usuari.                           
+    int pwmValue = volts * 255.0 / 5.0; //Els volts no serveixen directament perquè volem no valors entre 0 i 5 sino entre 0 i 255.
+    //és entre 0 i 255 perque és el numero de bits (2^8 = a 256). Faig una regla de 3 i multiplico el valor per 255 i divideixo entre 5.
+    //Per exemple si l'usuari inserta 2.5 tindras 2.5*255/5 igual 127.5. Aquet valor es transformara en 127 perque ha de ser integer i es guardara
+    // en pwmValue.
+    analogWrite(outputPin, pwmValue);
+  }
+}
+      
+      
+      <!-- Scripts necessaris -->
 
         <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.8/umd/popper.min.js"></script>
