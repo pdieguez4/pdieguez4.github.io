@@ -911,7 +911,25 @@ void loop() { //És un sistema que no s'atura mai, es repeteix fins que desconec
     analogWrite(outputPin, pwmValue);
   }
 }
-      
+const int analogPin = 0;
+
+void setup() {
+  Serial.begin(9600);
+}
+
+void loop() {
+  int reading = analogRead(analogPin); //analogRead llegeix els valos analogics del analogPin de 0 a 5 volts
+  float voltage = reading / 204.6; //1023 /  5 = 204,6 dividim 1023 (2^10 - 1 per a Arduino) entre 5 (volts d'Arduino)
+      graus, d'humitat 0% - 100%) i els valor de 0 a 1023 no tenen sentit, perquè si fos un altre ESP32 seria de 0 a 4095 i el valor 500 en el prier cas estaria per la meitat i en el segon cas
+      seria menys. Si utilitzem voltatge tenim una mes real del que està passat en el sensor i buscarem la relació entre els volts i la temperatura / humitat a la fulla de caracteristiques (datasheet),
+      una gevada tenir la relació farem unna regla de 3 o un mapejat
+  Serial.print("Reading="); // Quan poso entre cometes el print em surt tal  qual la paraula reading= que significa lector
+  Serial.print(reading);// reading no té cometes i és una variable que conté valorss entre 0 i 1023
+  Serial.print("\t\tVolts="); // \t
+  Serial.println(voltage);
+  delay(500);
+}
+
       
       <!-- Scripts necessaris -->
 
