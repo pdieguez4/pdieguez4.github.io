@@ -1148,7 +1148,35 @@ void loop() {
     </li>
   </ol>
   <p><strong>Seqüència completa:</strong> 7, 6, 1, 8, 11, 10</p>
-      
+
+  <h1>Números aleatoris i arduino</h1>
+      <pre><button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button><code class="language-arduino">
+      void setup() {
+  Serial.begin(9600);
+}
+
+void loop() {
+  int number = random(1, 7); //genera numeros aleatoris entre 1 i 7 que siguin enters, amb una llavor 0
+  Serial.println(number);
+  delay(500); 
+}   
+      </code></pre>
+      <pre><button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button><code class="language-arduino">
+        void setup() {
+  Serial.begin(9600);
+  randomSeed(analogRead(0)); //genera numeros aleatoris de forma potent. Si dintre de randomSeed posem un número, sempre
+        //sortira el mateix número aleatori com pasa amb el <a href="https://pompeu.neocities.org/arduino/random/seed">
+          exemple del profesor</a> on podem canviar la seed o llavor i comprovar-ho
+        //analog read llegeix valors de 0 a 1023 de la entrada A0, sempre esta llegint i sempre té un soroll de fons
+        // de forma que genera numeros aleatoris al soroll de fons de forma que fem numeros aleatoris de numeros aleatoris
+        //
+}
+
+void loop() {
+  int number = random(1, 7);
+  Serial.println(number);
+  delay(500); 
+}
         <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.8/umd/popper.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
