@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,7 +12,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/default.min.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/js/all.min.js"></script>
-  <script src="https://pdieguez4.github.io/robotica/arduino/programacio/arduino.min.js"></script>
+  <script src="https://mszabo4.github.io/robotica/arduino/programacio/arduino.min.js"></script>
 
   <script>hljs.highlightAll();</script>
   <title>Programació</title>
@@ -161,9 +160,9 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
-            <a class="navbar-brand" href="https://pdieguez4.github.io">
-                <img src="https://pdieguez4.github.io/logo.png" alt="Logo" width="50">
-                Web de Pedro Dieguez
+            <a class="navbar-brand" href="https://mszabo4.github.io">
+                <img src="https://mszabo4.github.io/logo.png" alt="Logo" width="50">
+                Web de Miguel Angel
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -172,7 +171,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul.n class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="https://pdieguez4.github.io">Inici</a>
+                        <a class="nav-link" href="https://mszabo4.github.io">Inici</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
@@ -180,13 +179,13 @@
                             Programació
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="https://pdieguez4.github.io/cara">Cara interactiva</a>
-                            <a class="dropdown-item" href="https://pdieguez4.github.io/cara1">Cara interactiva nova</a>
-                            <a class="dropdown-item" href="https://pdieguez4.github.io/ocell">Ocell</a>
-                            <a class="dropdown-item" href="https://pdieguez4.github.io/reproducer">Coldplay</a>
-                            <a class="dropdown-item" href="https://pdieguez4.github.io/astronomia">Astronomia</a>
-                            <a class="dropdown-item" href="https://pdieguez4.github.io/astronomia/animacio">Astronomia</a>
-                            <a class="dropdown-item" href="https://pdieguez4.github.io/openair">Openair</a>
+                            <a class="dropdown-item" href="https://mszabo4.github.io/cara">Cara interactiva</a>
+                            <a class="dropdown-item" href="https://mszabo4.github.io/cara1">Cara interactiva nova</a>
+                            <a class="dropdown-item" href="https://mszabo4.github.io/ocell">Ocell</a>
+                            <a class="dropdown-item" href="https://mszabo4.github.io/reproducer">Coldplay</a>
+                            <a class="dropdown-item" href="https://mszabo4.github.io/astronomia">Astronomia</a>
+                            <a class="dropdown-item" href="https://mszabo4.github.io/astronomia/animacio">Astronomia</a>
+                            <a class="dropdown-item" href="https://mszabo4.github.io/openair">Openair</a>
                         </div>
                     </li>
                     <li class="nav-item dropdown">
@@ -195,12 +194,12 @@
                             Robòtica
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
-                            <a class="dropdown-item" href="https://pdieguez4.github.io/robotica/cdirecte">Cinemàtica
+                            <a class="dropdown-item" href="https://mszabo4.github.io/robotica/cdirecte">Cinemàtica
                                 directa</a>
-                            <a class="dropdown-item" href="https://pdieguez4.github.io/robotica/cinversa">Cinemàtica
+                            <a class="dropdown-item" href="https://mszabo4.github.io/robotica/cinversa">Cinemàtica
                                 inversa</a>
-                            <a class="dropdown-item" href="https://pdieguez4.github.io/reproducer">Coldplay</a>
-                            <a class="dropdown-item" href="https://pdieguez4.github.io/robotica/arduino">Arduino</a>
+                            <a class="dropdown-item" href="https://mszabo4.github.io/reproducer">Coldplay</a>
+                            <a class="dropdown-item" href="https://mszabo4.github.io/robotica/arduino">Arduino</a>
                         </div>
                     </li>
                     <li class="nav-item">
@@ -757,93 +756,93 @@ void flash(int duration) {
    </ul>
    
    <pre><button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button><code class="language-arduino">
-          // Al principi del codi, abans de la funció de configuració "set up" i a funció principal
-// "loop" que s'executa continuament, hem d'escriure sempe variables o constants.
+// Al principi del codi, abans de la funció de configuració "setup" i la funció principal 
+// "loop" que s'executa continuament, hem d'escriure sempre variables o constants.
 // A més, al principi del codi trobem les constants i variables globals, anomenades així perquè es poden cridar
-// o executar des de qualsevol part del codi, a diferencia de les variables locals que es
+// o executar des de qualsevol part del codi, a diferencia de les variables locals que es 
 // defineixen i s'utilitzen dintre de la mateixa funció "loop" o una funció addicional.
-// Davant de les variables i constants globals hauriem d'afegir les biblioteques necessàries per
-// fer funcionar el nostre codi ( amb "#include <nom_biblioteca.h>) l'extensio "h" deriva de C
-// i significa "bibliotecas de headers" o encapçalaments.
-const int ledPin = 13;
-const int dotDelay = 200;
+// Davant de les variables i constants globals hauriem d'afegir les biblioteques necessàries per 
+// fer funcionar el nostre codi ( amb "#include <nom_biblioteca.h> ) l'extensió "h" deriva de C
+// i significa "biblioteca de headers" o encapçalaments.        
+     const int ledPin = 13;
+const int dotDelay = 200
 
 // "const" vol dir que la variable no es modificarà dins del codi, "int" vol dir integer, o sigui
-// que el nombre que agafem haurà de ser enter, ja que els pints tenen números enters. El pun 13
-// és especial, té una resistencia interna en el cas d'Arduino uno que permet connectar directament un led, 
-// perquè està al costat del pin GND i puc clavar o connectar un led sense cap circuit o placa.
-// "ledPin" és una variable constant i s'anomena així per l'usuari, utilitzant camelCase, i referint-nos
-// al que fa aquest pin. "
-       
+// que el nombre que agafem haurà de ser enter, ja que els pins tenen números enters. El pin 13
+// és especial, té una resistència interna en el cas d'Arduino uno que permet connectar directament
+// un led, perquè està al costat del pin GND i puc clavar o connectar un led sense cap circuit o placa.
+// "ledPin" és una variable constant i s'anomena així per l'usuari, utilitzant camelCase i referint-nos
+// al que fa aquest pin.
 char* letters[] = {
   ".-", "-...", "-.-.", "-..", ".", "..-.", "--.", "....", "..",    // A-I
   ".---", "-.-", ".-..", "--", "-.", "---", ".--.", "--.-", ".-.",  // J-R
   "...", "-", "..-", "...-", ".--", "-..-", "-.--", "--.."          // S-Z
 };
-// Mes amut i més abaix tinc dos arrays composats cadascun d'ells per arrays interns i cada array intern
-// està composat de caracters que només poden ser "." o "-"
-// Quan jo crido "letters[0]" el que obtinc ".-" o sigui, la lletra A, en codi Morse.
-// Aquesta forma de treballar és molt dolenta, des d'un punt de vista d'eficiència perquè estic utilizant
-// un byte (un byte son 8 bits) sencer per cada punt o ratlla. 
+// Més amunt i més abaix tinc dos arrays composats cadascun d'ells per arrays interns i cada array intern
+// està composat de caracters que només poden ser "." o "-".
+// Quan jo crido "letter[0]" el que obtinc ".-" o sigui, la lletra A en codi Morse.
+// Aquesta forma de treballar és molt dolenta, des d'un punt de vista d'eficiència perquè estic utilitzant.
+// un byte ( un byte són 8 bits ) sencer per cada punt o ratlla. 
 // Un bit és un valor de 0 o 1 i això es podria utilitzar per fer els punts o ratlles perquè els dos valors
 // són dos estats, o 0 o 1, es podria asignar el 0 al punt i la ratlla l'1, fent-ho més eficient.
-// En un byte hi hn 8 bits i per aixó es podrien fer 256 caracters diferents.
-// Quants bytes de memoria necesitarmen utilitzant bytes o  bits per codificar morse? 
-// Aproximadament el Morse té uns 109 punts o ratlles pels números o lletres, de la manera més eficients 
-// tindrien un ús de 14 bytes i de la manera menys eficients 872 bytes
+// En un byte hi han 8 bits i per això es podrien fer 256 caracters diferents.
+// Quants bytes de memòria necesitarem utilitzant bytes o bits per codificar Morse?
+// Aproximadament el Morse té uns 109 punts o ratlles pels números o lletres, de la manera més eficient
+// tindriem un ús de 14 bytes i de la manera menys eficient 872 bytes.
 // Hem de tenir en compte
-// De fet ASCII utilitza 7 bits per crear 128 caracters ( de 0 a 127).
-// "*" és molt important, ja que ens indica que és un punter, "[]" ens indica que és una array, 
-// "numbers" m'indica el valor de l'array, i char m'indica el tipus d'element ( que són caracters ) que hi ha dins de l'array.
-// L'arrat de sota es diu numbers però està constituit per caracters, perquè tant els numerós com les lletres
+// De fet ASCII utilitza 7 bits per crear 128 caracters ( de 0 a 127 ).
+// "*" és molt important, ja que ens indica que és un punter, "[]" ens indica que és una array,
+//  "numbers" m'indica el valor de l'array, i char m'indica el tipus d'element ( que són caracters ) que hi ha dins
+// de l'array.
+// L'array de sota es diu numbers però està constituit per caracters, perquè tant els números com les lletres
 // estan constituides per "." o "-" que són caracters
-    
-    
-char* numbers[] = {
+  char* numbers[] = {
   "-----", ".----", "..---", "...--", "....-", ".....", "-....", "--...", "---..", "----."};
 
 void setup() {
   pinMode(ledPin, OUTPUT);
   Serial.begin(9600);
   // En el setup o configuració del microcontrolador indiquem que el pin 13 que ara es diu "ledPin" sigui és una sortida o "Output"
-  // Indiquem a l'arduino que es comuniqui amb l'ordinador a travves del port serial o serie i comenci a una velocitat de 
-  // 9600 baud o simbols/segon que són aprox. 9600 bits/segon
+  // Indiquem a l'arduino que es comuniqui amb l'ordinador a traves del port serial o serie i comenci a una velocitat de 
+  // 9600 bauds o simbols/segon que són aprox. 9600 bits/segon.
 }
+  
 
 void loop() {
-  // El loop és el codi principal, i el que el seu nom indica que es repeteix sene parar en un "loop".
-  // "char" significa que utilitzem una variable de tipus caracter i l'anomena "ch".
-  // "Serial.available" significa si està disponible la comunicació serie o "serial mnitos" que comunica el microcontrolador
+  // El loop és el codi principal, i el que el seu nom indica que es repeteix sense parar en un "loop".
+  // "char" signica que utilitzem una variable de tipus caracter i l'anomenem "ch".
+  // "Serial.available" significa si està disponible la comunicació serie o "serial monitor" que comunica  el microcontrolador
   // arduino amb el nostre ordinador o dispositiu.
-  // La comunicació entee arduino i l'ordinador és complexa:
-  // Primer pas: l'ordinador envia dades al monitor serie a traves de l'USB per un mecanimse que s'anomena "USB t Serial"
-  // Segon pas: la transformació anterior d'USB to Serial la fa un xip especial dintte d'Arduino.
-  // Tercer pas: les dades en format serie arriben a una part del microcontrolador anomenada UART que significa
-  // "Universa Asynchronou Receiver Transmiter"
-  // Quart pas: l'UART envia les dades que rep a una memòria temporal o "buffer" que pot emagatzemar 128 bytes fins que s'elimina en
-  // el moment que es llegeix
-  // la funció seriar available retorna al número de bytes de dades en el "buffer" que estan esperant a ser llegits. Si no hi ha cap misatge
-  // esperant a ser llegits, la funció retorna a 0
-  // La funció "Serial.read" el que fa és llegir el primer o el següent caracter disponible i l'emmagatzema a la varable "ch"
-  // El simbol >= o <= s'utilitza per comparar amb el número d'ASCII  que correspon per la lletra "a" per tant, podriem canviar l'a pel número "97"
-  // i la z és el número 122.
-  // Els altres que podem canviar serien 'A' pel número 65,z pel número 90.
-  // El caracter '0' correspon al número 48 i el caracter 9 correspon al número 57.
-  // El caracter ' ' correspon al número 32
-  // Els condicionals que hi han dintre del condicional general "Serial.available" el que fan és dir que se si el caracter és
-  // entre la  a i la z le restes el valor -a
-  // Immaginem que la primera lleta és una 'c', que equival al número 99, llavors si le restem la 'a' que és el 97 quedaria un número 2.
-  // El número 2 està dintre d'un ([]) és a dir, dintre d'un array i correspondria al tercer element de l'array de les lletres
+  // La comunicació entre arduino i l'ordinador és complexa: 
+  // Primer pas: l'ordinador envia dades al monitor serie a traves de l'USB per un mecanisme que s'anomena "USB to Serial"
+  // Segon pas: la transformació anterior d'USB to Serial la fa un xip especial dintre d'Arduino.
+  // Tercer pas: les dades en format serie arriben a una part del microcontrolador anomenada UART que significa 
+  // "Universal Asynchronous Receiver Transmiter"
+  // Quart pas: l'UART envia les dades que rep a una memòria temporal o "buffer" que pot enmagatzemar 128 bytes fins que s'elimina en
+  // el moment que es llegeix -Soy Marticon -by Miguel Angel
+  // La funció serial available retorna el número de bytes de dades en el "buffer" que estan esperant per ser llegits. Si no hi ha cap missatge
+  // esperant a ser llegit, la funció retorna a 0
+  // La funció "Serial.read" el que fa és llegir el primer o el següent caracter disponible i l'emmagatzema a la variable "ch"
+  // El símbol >= o <= s'utilitza per comparar amb el número d'ASCII que correspon per la lletra "a" per tant, podriem canviar l'a
+  // pel número 97 i la z és el número 122.
+  // Els altres caracters que podem canviar serien 'A' pel número 65, Z pel número 90.
+  // El caracter '0' correspon al número 48 i el caracter '9' correspon al número 57.
+  // El caracter ' ' correspon al número 32.
+  // Els condicionals que hi han dintre del condicional general "Serial.avaliable" el que fan és dir es que si el caracter és 
+  // entre la a i la z le restes el valor -a
+  // Imaginem que la primera lletra és una 'c', que equival al número 99, llavors si li restem la 'a' que és 97 quedaria un número 2.
+  // El número 2 està dintre d'un ([]) és a dir, dintre d'una array i correspondria al tercer element de l'array de les lletres.
   // Aquest tercer element és "-.-."
-  // Un altre exemple seria la 'H'estaria avaluat en un altre condicional, el de les mayuscules, aquest caracacter equival
-  // al numero 72,i le he de restar la 'A' que equival al número 65, per a tant ch - 'A' és 7 que és el 8é element de l'array
-  // de majúscula [7] i letters[7] és "....".
-  // Per que s'a de restar?
-  // Per coneixer la posició de la lletra a l'array, perquè hem posat l'array ordenat des de la 'a' fins la 'z' i desde la 'A' fins la 'Z'
-  // Ara tenim el número per exemple letters[7] igual a "...."
-    
+  // Un altre exemple seria la 'H' estaria avaluat en un altre condicional, el de les mayuscules, aquest caracter equival 
+  // al número 72, i li he de restar la 'A' que equival al número 65, per tant ch - 'A' és 7 que és el vuité element de l'array
+  // de majúscula [7] i letters[7] és "...." .
+  // Per qué s'ha de restar?
+  // Per conexier la posició de la lletra a l'array, perquè hem possat l'array ordenat 
+  // des de la 'a' fins la 'z' i des de la 'A' fins la 'Z'
+  // Ara tenim el número per exemple letters[7] igual a "...." i el que volem és aplicar una funció.
+  // Aquesta funció és la funció "flashSequence" que agafarà l'element vuité de l'array com a arguments 
 
-  char ch;
+    char ch;
   if (Serial.available() > 0) {
     ch = Serial.read();
     if (ch >= 'a' && ch <= 'z') {
@@ -860,8 +859,17 @@ void loop() {
     }
   }
 }
-
-void flashSequence(char* sequence) {
+// El "void flashSequence()" és una funció que rep un argument
+// El que fa amb aquest argument és utilitzar un punter i seguir la seqüencia que es troba amb letters[7]
+// que és "....", aquest quatre caracters o punts són una seqüencia de caracters ordenada gracies al punter*
+// El codi següent el que fa és amb la posició 'i' inicial de 0 que és el pointer al principi de l'array "...."
+// I el que fa és que mentre (While) aquest element 'i' de la seqüencia no sigui (!) = NULL, es a dir mentres 
+// hi hagi un caracter, crida una funció diferent anomenada "flashDotOrDash" que rep com a argument el valor de 'i'
+// concret en aquella seqüencia.
+// Després de rebre'l passa el següent valor de 'i', si la 'i' era el primer ".", la i++ primera o i = i+1 és 
+// el segon punt ".". I així fins al cinquè punt que s'atura tot, perqué és NULL, es a dir, no hi ha cinquè punt.
+// El Delay serveix per deixar espai entre lletres o sequences.
+  void flashSequence(char* sequence) {
   int i = 0;
   while (sequence[i] != NULL) {
     flashDotOrDash(sequence[i]);
@@ -869,7 +877,12 @@ void flashSequence(char* sequence) {
   }
   delay(dotDelay * 3);    // gap between letters
 }
-
+// La funció "flashSequence" que llegeix una determinada lletra que rep com a argument, letters[7] i reconeix que 
+// està formada per "...." i crida la funció "flashDotOrDash" fins que s'acaben els punts o ratjes i deixa un espai
+// al final per indicar que és una lletra.
+// La funció "flashDorOrDash" té un parametre intern anomenat "dotOrDash". Aquesta funció sempre encen un led, i sempre
+// el deixa un temps encés o delay. En el cas que sigui una ratlla, el fa 3 vegades més llarg que un punt, gracies
+// a un condicional "if" o en cas contrari "else". No diem si és una ratlla, diem si no és un punt
 void flashDotOrDash(char dotOrDash) {
   digitalWrite(ledPin, HIGH);
   if (dotOrDash == '.') {
@@ -882,61 +895,257 @@ void flashDotOrDash(char dotOrDash) {
   digitalWrite(ledPin, LOW);    
   delay(dotDelay); // gap between flashes
 }
-      <p> El ESP 32-52 té l'avantatge detenir més resolució, es a dir, pot donar 16384 valors diferents entre 0-3,3 volts Aixxò pot que no es noti en un led, però es nota en un motor, on l'ESP32  permet accedir a més velocitats diferents. El motors   </p>
-        const int outputPin = 3;
+// El "loop" és un bucle i continuament crida a la funció "flashSequence" que el que fa és llegir cada lletra i convertirles
+// en punts i ratlles, aquesta funció crida a la funció "flashDotOrDash" continuament que fa que s'encenguin els leds segon
+// els punts i ratlles. Sempre hem de dividir un codi en diverses funcions, primer per fer-lo més modular i entendre que fa 
+// cada funció i a més ens fa més facil el manteniment i canvis futurs.
 
+
+<h2>Input i Output: Entrades i sortides</h2>
+<p>Les entrades i sortdes poden ser de dues maneres diferents, digitals o analògiques, les digitals poden 
+ser de 0 voltso de 3,3 volts i en altres plaques arduino, poden ser 0 volts i 5 volts. Les analògiques
+serien graduals, de 0 a 3,3 volts o 5 volts en 2**n pasos, sent "n" el número de bits.</p>
+<pre><button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button><code class="language-arduino">
+
+const int outPin = 3;
+// pinMode és una funció predeterminada o "built-in", vol dir que està predefinida en el llenguatje
+// arduino i sempre ha de rebre 2 argument o parametres, el primer sempre ha de ser un númer enter o "int"
+// (integer) que correspon al número de pin que volem conectar (en aquet cas 3), el segon argument és el mode
+// que pot ser OUTPUT que significa sortida, o INPUT que significa entrada, també existeix INPUT_PULLUP
 void setup() {
-  pinMode(outputPin, OUTPUT);
-  Serial.begin(9600); // Comença la comunicació serie USB entre arduino i l'ordinador a 9600 (són 9600 símbols per segon)
-      l'objecte Serial és de la classe serial i li apliquem amb la sintaxi del punt el metode begin que té com a parametre o argument
-    un numero enter que correspondra als bauds
-  Serial.println("Enter Volts 0 to 5"); //Demana que el usuari que entri per la consola o serial monitor del ARDUINO IDE
-      un numero entre 0 i 5 
-      //Println siginifa imprimeix una linea i li apliquem en la sintaxis del punt a la clase serial pot rebre diversos paramatres, si els
-      posem entre cometes s'escriu tal cual i si no, escriu el valor de la variable.
+  pinMode(outPin, OUTPUT);
+  Serial.begin(9600); //Miguel Angel
+  Serial.println("Enter 1 or 0");
+}
 
-void loop() { //És un sistema que no s'atura mai, es repeteix fins que desconecto el arduino
-  if (Serial.available() > 0) { //Serial.available és un mètode que espera caràcters, major a 0 és que hi ha un caràcter
-    float volts = Serial.parseFloat(); //parseFloat és una funció o mètode que s'aplica a l'objecte serial i la seva funció és parsejar o 
-    //analitzar el contingut de caràcters que arriba per port serial i si és de tipus decimal o floating point number(numero amb coma flotant)
-    // o variable tipo float. Les variables float inclouen les variable int o integer o numeros sencers. També existeix parseInt que només
-    // acceptaria numeros enters. 
-    // Volts emmagatzema el numero decimal que escriu el usuari
-    //El float volts que fa? Crea un espai a la memoria del ordinador anomenat volts que haura de ser del tipus floating point number que 
-    // emmagatzemara el que li arribi del port serial escrit per l'usuari.                           
-    int pwmValue = volts * 255.0 / 5.0; //Els volts no serveixen directament perquè volem no valors entre 0 i 5 sino entre 0 i 255.
-    //és entre 0 i 255 perque és el numero de bits (2^8 = a 256). Faig una regla de 3 i multiplico el valor per 255 i divideixo entre 5.
-    //Per exemple si l'usuari inserta 2.5 tindras 2.5*255/5 igual 127.5. Aquet valor es transformara en 127 perque ha de ser integer i es guardara
-    // en pwmValue.
-    analogWrite(outputPin, pwmValue);
+void loop() {
+  if (Serial.available() > 0) {
+    char ch = Serial.read();
+    if (ch == '1') {
+      digitalWrite(outPin, HIGH);
+    }
+    else if (ch == '0') {
+      digitalWrite(outPin, LOW);
+    }
   }
 }
-const int analogPin = 0;
+</code></pre>      
+      <p> Quan tenim una entrada hem de possar mode input i en comptes de fer un digitalWrite que fem a les sortides hem de fer un digitalRead per obtenir l'entrada, que només pot ser un valor digital de 0 o 1 (binari).
+    Si el voltatge és menor a 2,5 volts es traduirà com un 0, en canvi si és superior com un 1</p>
+
+<pre><button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button><code class="language-arduino">
+
+    const int inputPin = 5;
+
+    void setup() {
+        pinMode(inputPin, INPUT);
+        Serial.begin(9600);
+    }
+
+    void loop() {
+        int reading = digitalRead(inputPin);
+        Serial.println(reading);
+        delay(1000);
+    }
+
+</code></pre>  
+
+<p>// El pullup estabilitza la senyal que rep per a que la transcripció a binari (0 i 1) sigui correcta. Si analitzem el que
+// passa amb un oscil·loscopi (mesura les oscil·lacions de la corrent) si mirem un oscil·loscopi unveurem que hi han 
+// pujades i baixades quan premo el botó no baixa de forma ideal sinó que té alguns pics que es diuen rebots 
+// (bouncing / debouncing) en el cas de debouncing és més correcte ja que el senyal per defecte és inestable i el que fem
+// és estabilitzar-lo -> desrebotar.</p>
+                    
+<pre><button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button><code class="language-arduino">
+const int inputPin = 5;
 
 void setup() {
+  pinMode(inputPin, INPUT_PULLUP);
   Serial.begin(9600);
 }
 
 void loop() {
-  int reading = analogRead(analogPin); //analogRead llegeix els valos analogics del analogPin de 0 a 5 volts
-  float voltage = reading / 204.6; //1023 /  5 = 204,6 dividim 1023 (2^10 - 1 per a Arduino) entre 5 (volts d'Arduino)
-      graus, d'humitat 0% - 100%) i els valor de 0 a 1023 no tenen sentit, perquè si fos un altre ESP32 seria de 0 a 4095 i el valor 500 en el prier cas estaria per la meitat i en el segon cas
-      seria menys. Si utilitzem voltatge tenim una mes real del que està passat en el sensor i buscarem la relació entre els volts i la temperatura / humitat a la fulla de caracteristiques (datasheet),
-      una gevada tenir la relació farem unna regla de 3 o un mapejat
-  Serial.print("Reading="); // Quan poso entre cometes el print em surt tal  qual la paraula reading= que significa lector
-  Serial.print(reading);// reading no té cometes i és una variable que conté valorss entre 0 i 1023
-  Serial.print("\t\tVolts="); // \t
-  Serial.println(voltage);
-  delay(500);
+  int reading = digitalRead(inputPin);
+  Serial.println(reading);
+  delay(1000);
 }
+</code></pre>
+<p> Negació. El signe d'admiració "!" significa negar la variable que es posa després del signe.</p>
+<p> Hi ha dos variables inicials, que son constants per definició del codi. La variable ledPin es el pin el qual conectem
+el led, que es 13 normalment. I el pin 5 es un pin on conectem un interruptor per entrada de dades. El pin 5 esta encés per defecte
+perque li hem dit que es un input pull-up, significa que l'interruptor deixa pasar la corrent per defecte. Si fos un input només 
+estaria a 0, es a dir, l'interruptor estaria obert. La variable switch open esta al principi amb valor 1 i quan movem el botó, 
+l'apaguem perqué la variable switchOpen que estava a 1 es transforma a !switchOpen que esta a 0. I si li torno a negar, sortira 1.</p>
+<pre><button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button><code class="language-arduino">
+    const int inputPin = 5;
+    const int ledPin = 13
+    void setup() {
+     pinMode(ledPin, OUTPUT);
+     pinMode(inputPin, INPUT_PULLUP);
+    }
+    void loop() {
+     int switchOpen = digitalRead(inputPin);
+     digitalWrite(ledPin, ! switchOpen);
+    }
+    </code></pre>
+<p> Clica a la imatge següent per veure la simulació </p>
+<a href = "https://www.tinkercad.com/things/6kmvYJBnQFx-circuit-54-monk" target = "_blank"> <img src = "54.PNG"> </a>
+<p> Toggles. </p>
+<pre><button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button><code class="language-arduino">
+    const int inputPin = 5;
+    const int ledPin = 13;
+    int ledValue = LOW;
 
+    void setup()  {
+    pinMode(inputPin, INPUT_PULLUP);
+    pinMode(ledPin, OUTPUT);
+    }
+    void loop()  {
+    if (digitalRead(inputPin) == LOW) {
+     ledValue = ! ledValue;
+     digitalWrite(ledPin, ledValue);
+  }
+}
+</code></pre>
+<a href = "https://www.tinkercad.com/things/ijQ7CKiIRbu-circuit-55-monk" target = "_blank"> <img src = "55.PNG"> </a>
+
+<p>solució amb llibreria </p>
+<pre><button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button><code class="language-arduino">
+    const int inputPin = 5;
+    const int ledPin = 13;
+    int ledValue = LOW;
+    
+    void setup()  {
+    pinMode(inputPin, INPUT_PULLUP);
+    pinMode(ledPin, OUTPUT);
+    }
+    
+    void loop() {
+    if (digitalRead(inputPin) == LOW) {
+     ledValue = ! ledValue;
+     digitalWrite(ledPin, ledValue); 
+     delay(500);
+    }
+    }
+</code></pre>
+<pre><button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button><code class="language-arduino">
+<p>El "contact bounce" podríem traduir-ho com a rebot de contacte, és un problema comú a diferents dispositius com per exemple interruptors mecànics, 
+  reles (interruptor que canvia la posició d'una palanca interna mitjançant electromagnestisme), contactes de bateria. Tots aquest elements
+tenen en comú que estan fets per metalls elàstics, de forma que quan jo apreto un interruptor mecànic el metall que tanca el circuit rebota 
+diverses vegades sobre el contacte, provocant una inestabilitat en el senyal.</p>
+      #include <Bounce2.h>
+        const int inputPin = 5;
+        const int ledPin = 13;
+        int ledValue = LOW;
+        Bounce bouncer = Bounce(); 
+    // La majúscula
+
+        void setup() {
+        pinMode(inputPin, INPUT_PULLUP);
+        pinMode(ledPin, OUTPUT);
+        bouncer.attach(inputPin);
+        // bouncer.interval(50); // interval in ms
+        }
+
+        void loop() {
+        if (bouncer.update() && bouncer.read() == LOW) { // Linea clau perquè
+          ledValue = ! ledValue;
+          digitalWrite(ledPin, ledValue);
+        }
+        }
+ </code>
+</pre>
+<pre><button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button><code class="language-arduino">
+
+    const int outputPin = 3;
+
+void setup() {
+  pinMode(outputPin, OUTPUT);
+  Serial.begin(9600);
+  Serial.println("Enter Volts 0 to 5"); // Demana que l'usuari que entri per la consola o srial monitor de l'ARDUINO IDE introdueixi un número entre 0 i 5
+} // println significa imprimeix una linea i li apliquem en la sintaxi del punt a la classe serial pot rebre diversos parametres, si els posem entre cometes s'escriu tal cual i si no, escriu el valor de la variable
+
+void loop() {
+  if (Serial.available() > 0) { // Serial.avalable és un mètode que espera caràcters, major a 0 és que hi ha caràcters
+    float volts = Serial.parseFloat(); // parseFloat és una funció o mètode que s'aplica a l'objecte serial i la seva funció és parsejar o analitzar el contingut de caràcters que arriba per port serial i si és de tipus decimal o floating point number o variable tipus float. Les variables float inclouen les variables int. També existeix parseInt que només acceptaria números enters
+   // El float volts el que fa és crear un espai a la memòria de l'ordinador anomenat volts que hauria de ser del tipus floating point number que emmagatzemarà el que li arribi del port serial per l'usuari, o sigui, emmagatzema el número decimal quue escriu l'usuari
+  int pwmValue = volts * 255.0 / 5.0; // Els volts no serveixen directament perquè
+    analogWrite(outputPin, pwmValue);
+  }
+}
+</code></pre>
+        <p> El "const int outputPin" defineix el pin de sortida constant que no es pot canviar. Després de definir
+            el pin de sortida 3 i en output (sortida) i la velocitat bauds (9600), el codi demana que escrigui a la consola
+            del programa Arduino IDE: Enter volts 0-5.</p>
+            <p> Al loop principal comprova que hi hagi caràcters escrits a la consola, després agafa el valor que hem 
+            donat i el guarda en la variable volts. El valor pot ser en decimals perquè posa float ("Floating point number").
+            El mètode parseFloat l'apliquem amb la sintaxi del punt al objecte Serial (Que es posa en majúscula, normalment 
+            seria una classe en majúscula) i agafa el valor de la consola sèrie</p>
+            <p> La variable pwmValue és entera (int o "integer") i el que fa és convertir el valor de volts (0-5) a valors
+            de 0-255, que és el numero de bits (2^8=256). Si fos un ESP32-S3 de 14 bits tal com indica el data
+            sheet o fulla de caracteristiques de el ESP32-S3la linea de codi seria:
+            "Serial.println("Enter Volts 0-3.3")
+            "int pwmValue = volts * 16384.0 / 3.3" </p>
+            
+            <p> El ESP32-S3 te l'avantatge de tenir més resolució, es a dir,  pot donar 16384 valors diferents entre 0-3,3 volts
+                Aixó pot que no es noti en un led, peró es nota en un motor, on l'ESP32 permet accedir a més velocitats diferents. Els
+                motors poden arribar a 16 bits, que es 2^16 o 65536 valors diferents, depenent del tipus de motor, pot ser observat o no </p>
+<h2>Números aleatoris, perquè són importants i com es fan</h2>
+    <p>La funció random deriva de la funció rnd del llenguatge C i C++, i funciona de la mateixa manera. No genera números
+    aleatoris, sinó pseudoaleatoris, perquè estan creats per un algorisme o algoritme anomenat "Generador lineal congruencial".
+    Aquest algoritme és determinista, es a dir que sempre donarà els mateixos resultats. La funció random necessita una
+    llavor o seed per generar els números i si no s'indica acostuma a ser 1 o 0, en arduino és 1. Donarem un exeple matematic</p>
+
+<h1>Generació de Nombres Pseudoaleatoris: LCG + Arduino</h1>
+
+  <h2>1. Algorisme LCG (Linear Congruential Generator)</h2>
+  <p>
+    L’algorisme congruencial lineal genera seqüències pseudoaleatòries segons la fórmula de recursió:
+  </p>
+  <div>
+    \[
+      X_{n+1} \;=\; \bigl(a \cdot X_n + c\bigr)\;\bmod\; m
+    \]
+  </div>
+  <p>On:</p>
+  <ul>
+    <li><strong>\(X_n\)</strong> = valor anterior.</li>
+    <li><strong>\(a\)</strong> = multiplicador.</li>
+    <li><strong>\(c\)</strong> = increment.</li>
+    <li><strong>\(m\)</strong> = mòdul.</li>
+    <li><strong>\(X_0\)</strong> = llavor inicial (seed).</li>
+  </ul>
+
+  <h3>Exemple Numèric Pas a Pas</h3>
+  <p>Suposem:</p>
+  <ul>
+    <li>\(a = 5\)</li>
+    <li>\(c = 3\)</li>
+    <li>\(m = 16\)</li>
+    <li>\(X_0 = 7\)</li>
+  </ul>
+  <ol>
+    <li>
+      \(X_1 = (5 \times 7 + 3) \bmod 16 = 38 \bmod 16 = 6\)
+    </li>
+    <li>
+      \(X_2 = (5 \times 6 + 3) \bmod 16 = 33 \bmod 16 = 1\)
+    </li>
+    <li>
+      \(X_3 = (5 \times 1 + 3) \bmod 16 = 8  \bmod 16 = 8\)
+    </li>
+    <li>
+      \(X_4 = (5 \times 8 + 3) \bmod 16 = 43 \bmod 16 = 11\)
+    </li>
+    <li>
+      \(X_5 = (5 \times 11 + 3) \bmod 16 = 58 \bmod 16 = 10\)
+    </li>
+  </ol>
+  <p><strong>Seqüència completa:</strong> 7, 6, 1, 8, 11, 10</p>
       
-      <!-- Scripts necessaris -->
-
         <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.8/umd/popper.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
 
 </body>
-
 </html>
