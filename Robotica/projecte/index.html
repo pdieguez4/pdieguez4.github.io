@@ -521,6 +521,70 @@
 <p>
   Finalment, vam decidir <strong>canviar de microcontrolador (MU)</strong> per continuar desenvolupant el projecte.
 </p>
+    <h3 style="font-size: 1.6rem; color: #7dd3fc;">Aquest es el codi que hem ulitzat:</h3>
+    <pre><code>const int micPin = A0;
+const int speakerPin = 5;
+
+const int threshold = 300;
+
+#define DO  262
+#define RE  294
+#define MI  330
+#define FA  349
+#define SOL 392
+#define LA  440
+#define SI  494
+#define DO2 523
+
+const int baseDuration = 400;
+
+int melody[] = {
+  DO, DO, RE, MI,
+  MI, RE, DO, RE,
+  MI, MI, MI, 0,
+  RE, RE, RE, 0,
+  DO, DO, DO, 0,
+  DO, RE, MI, MI, RE, DO
+};
+
+int noteDurations[] = {
+  400, 400, 400, 400,
+  400, 400, 400, 400,
+  600, 400, 400, 400,
+  600, 400, 400, 400,
+  600, 400, 400, 400,
+  400, 400, 400, 400, 400, 600
+};
+
+void setup() {
+  pinMode(speakerPin, OUTPUT);
+  Serial.begin(115200);
+}
+
+void loop() {
+  int micValue = analogRead(micPin);
+  Serial.println(micValue);
+
+  if (micValue > threshold) {
+    for (int i = 0; i < sizeof(melody) / sizeof(melody[0]); i++) {
+      int note = melody[i];
+      int duration = noteDurations[i];
+
+      if (note == 0) {
+        noTone(speakerPin);
+      } else {
+        tone(speakerPin, note, duration);
+      }
+      delay(duration * 1.3);
+    }
+    delay(1000);
+  } else {
+    noTone(speakerPin);
+  }
+
+  delay(50);
+}
+</code></pre>
 </div>
 </body>
 </html>
