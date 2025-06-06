@@ -294,7 +294,16 @@
       z-index: 10;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     }
-
+ .copy-btn {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            color: #007bff;
+        }
     .navbar-brand {
       display: flex;
       align-items: center;
@@ -514,7 +523,7 @@
 </p>
 
 <ul>
-  <li>La <strong>XIAO</strong> donava errors d'<code>exit status</code>.</li>
+  <li>La <strong>XIAO</strong> donava errors d'exit status.</li>
   <li>Les altres <strong>ni apareixien al port COM</strong>.</li>
 </ul>
 
@@ -522,7 +531,7 @@
   Finalment, vam decidir <strong>canviar de microcontrolador (MU)</strong> per continuar desenvolupant el projecte.
 </p>
     <h3 style="font-size: 1.6rem; color: #7dd3fc;">Aquest es el codi que hem ulitzat:</h3>
-    <pre><code>const int micPin = A0;
+    <pre><button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button><code>const int micPin = A0;
 const int speakerPin = 5;
 
 const int threshold = 300;
