@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-mml-chtml.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Montserrat:wght@700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/default.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/js/all.min.js"></script>
+  <script src="https://mszabo4.github.io/robotica/arduino/programacio/arduino.min.js"></script>
+
+  <script>hljs.highlightAll();</script>
+  <title>Projecte final</title>
+<style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #0f172a, #1e293b);
+      color: #e2e8f0;
+      margin: 0;
+      padding: 0;
+    }
+
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: linear-gradient(45deg, #1e40af, #0ea5e9);
+      padding: 12px 24px;
+      border-bottom: 4px solid #38bdf8;
+      z-index: 10;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .navbar-brand {
+      display: flex;
+      align-items: center;
+      color: #ffffff !important;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.75rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      transition: color 0.3s ease-in-out;
+    }
+
+    .navbar-brand:hover {
+      color: #38bdf8 !important;
+    }
+
+    .nav-link {
+      color: #ffffff !important;
+      font-weight: 600;
+      margin-right: 15px;
+      position: relative;
+      transition: color 0.3s ease;
+    }
+
+    .nav-link:hover {
+      color: #38bdf8 !important;
+    }
+
+    .content-container {
+      margin: 140px auto 50px auto;
+      padding: 40px;
+      max-width: 900px;
+      background-color: #1e293b;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+      border-radius: 15px;
+      border-left: 5px solid #38bdf8;
+      border-right: 5px solid #38bdf8;
+      animation: fadeIn 1.2s ease-in-out;
+    }
+
+    h1 {
+      color: #0ea5e9;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 2.5rem;
+      font-weight: 700;
+      text-align: center;
+    }
+
+    .custom-button {
+      background: linear-gradient(135deg, #0ea5e9, #1e40af);
+      color: white;
+      border: none;
+      padding: 18px 40px;
+      font-size: 20px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      border-radius: 50px;
+      font-weight: bold;
+      text-transform: uppercase;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .custom-button:hover {
+      background: linear-gradient(135deg, #38bdf8, #1e40af);
+      transform: scale(1.1);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+    }
+
+    table {
+      width: 60%;
+      border-collapse: collapse;
+      margin: 20px auto;
+      background-color: #1e293b;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    th, td {
+      border: 1px solid #0ea5e9;
+      padding: 12px;
+      text-align: center;
+      color: #e2e8f0;
+    }
+
+    thead {
+      background: #0ea5e9;
+      font-weight: bold;
+      color: #fff;
+    }
+
+    tbody tr:nth-child(even) {
+      background-color: #172030;
+    }
+
+    tbody tr:hover {
+      background-color: #0f172a;
+    }
+
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+</style>
+  <script>
+    function copyCode(button) {
+      const codeBlock = button.nextElementSibling.innerText;
+      navigator.clipboard.writeText(codeBlock).then(() => {
+        button.innerHTML = '<i class="fas fa-check"></i>';
+        setTimeout(() => { button.innerHTML = '<i class="fas fa-copy"></i>'; }, 2000);
+      });
+    }
+  </script>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="https://mszabo4.github.io">
+        <img src="https://mszabo4.github.io/logo.png" alt="Logo" width="50">
+        Web de Miguel A.
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="https://mszabo4.github.io">Inici</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              Programació
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="https://mszabo4.github.io/cara">Cara interactiva</a>
+              <a class="dropdown-item" href="https://mszabo4.github.io/ocell">Ocell</a>
+              <a class="dropdown-item" href="https://mszabo4.github.io/wepray">We Pray</a>
+              <a class="dropdown-item" href="https://mszabo4.github.io/coldplay">Coldplay</a>
+              <a class="dropdown-item" href="https://mszaboo4.github.io/astronomia">Astronomia</a>
+              <a class="dropdown-item" href="https://mszabo4.github.io/openair">Openair</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-bs-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              Robòtica
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
+              <a class="dropdown-item" href="https://mszabo4.github.io/robotica/cdirecte">Cinemàtica
+                directa</a>
+              <a class="dropdown-item" href="https://mszabo4.github.io/robotica/cinversa">Cinemàtica
+                inversa</a>
+              <a class="dropdown-item" href="https://mszabo4.github.io/robotica/coldplay">Coldplay</a>
+              <a class="dropdown-item" href="https://mszabo4.github.io/robotica/arduino">Arduino</a>
+            </div>
+          </li>
+          <li class="nav-item">
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="content-container">
+  <p><strong>Pedro Diéguez Miguel Ángel Szabo</strong> - <em>6/06/2025</em></p>
+
+  <h1 class="text-center my-4" style="font-size: 3rem; color: #0ea5e9; text-shadow: 2px 2px #0f172a;">QUÈ HEM FET?</h1>
+
+ <p>
+  El nostre projecte es basa en la creació d’un <strong>sistema interactiu capaç d’escoltar i respondre amb so</strong>, 
+  una mena de dispositiu que “escolta” l’entorn a través d’un <strong>micròfon</strong> i reprodueix 
+  <strong>sons o melodies</strong> mitjançant un <strong>altaveu</strong>, controlat amb una 
+  <strong>placa microcontroladora</strong>.
+</p>
+
+<p>
+  Inicialment, vam crear el nostre codi font per generar notes musicals amb Arduino i reproduir-les amb un altaveu. 
+  La primera placa que vam utilitzar va ser la <strong>ESP32-S3 WROOM</strong>, que va ser també la primera a donar-nos 
+  problemes tècnics. Aquests són alguns dels errors amb què ens vam trobar:
+</p>
+    
+  <h2 style="font-size: 2.2rem; color: #38bdf8; border-left: 6px solid #0ea5e9; padding-left: 15px;">Que significa l'error GND a Arduino?</h2>
+  <p>No és un error oficial del programari d'Arduino, sinó un <strong>problema habitual de maquinari</strong>.</p>
+  <p>Pot presentar-se de diverses formes:</p>
+
+  <h3 style="font-size: 1.6rem; color: #7dd3fc; margin-top: 25px;">1. Falta de connexió al GND</h3>
+  <p>Si connectes sensors o mòduls sense unir els seus GND amb el de l’Arduino, <strong>no hi ha una referència comuna de voltatge</strong>. Resultat: fallades aleatòries o mal funcionament.</p>
+
+  <h3 style="font-size: 1.6rem; color: #7dd3fc;">2. Connexions dolentes o cables solts</h3>
+  <p>Un GND mal connectat pot provocar errors de lectura, reinicis o fallades de comunicació.</p>
+
+  <h3 style="font-size: 1.6rem; color: #7dd3fc;">3. GNDs no compartits entre diferents fonts</h3>
+  <p>Si utilitzes, per exemple, una bateria i un USB sense unir els seus GNDs, els dispositius <strong>no “parlen el mateix idioma elèctric”</strong>.</p>
+
+  <h2 style="font-size: 2.2rem; color: #38bdf8; border-left: 6px solid #0ea5e9; padding-left: 15px; margin-top: 40px;">Què significa l'error "Exit Status"?</h2>
+
+  <p>L'<strong>exit status</strong> (o codi de sortida) és un número que un programa retorna al sistema operatiu quan acaba la seva execució.</p>
+
+  <p>En el cas de l'<strong>IDE d'Arduino</strong>, aquest missatge apareix quan alguna cosa falla durant la <strong>compilació</strong> o la <strong>càrrega del programa a la placa</strong>.</p>
+
+  <p>Per exemple:</p>
+  <ul>
+    <li><strong>exit status 0</strong>: Tot ha anat bé, sense errors.</li>
+    <li><strong>exit status 1</strong>: Hi ha hagut un error de compilació, com ara una ordre mal escrita, una llibreria que falta o un problema de sintaxi.</li>
+    <li><strong>exit status 255</strong>: Sol indicar un error greu, com que el port USB no està disponible.</li>
+  </ul>
+
+  <p>Aquest número per si sol no dona gaire informació; el més important és llegir el <strong>missatge d'error complet</strong> que apareix just abans a la consola de l'IDE. Allà trobaràs la causa real del problema.</p>
+
+  <h2 style="font-size: 2.2rem; color: #38bdf8; border-left: 6px solid #0ea5e9; padding-left: 15px; margin-top: 40px;">Quines plaques noves vam utilitzar?</h2>
+
+  <!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-mml-chtml.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Montserrat:wght@700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/default.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/js/all.min.js"></script>
+  <script src="https://mszabo4.github.io/robotica/arduino/programacio/arduino.min.js"></script>
+
+  <script>hljs.highlightAll();</script>
+  <title>Projecte final</title>
+<style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #0f172a, #1e293b);
+      color: #e2e8f0;
+      margin: 0;
+      padding: 0;
+    }
+
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: linear-gradient(45deg, #1e40af, #0ea5e9);
+      padding: 12px 24px;
+      border-bottom: 4px solid #38bdf8;
+      z-index: 10;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .navbar-brand {
+      display: flex;
+      align-items: center;
+      color: #ffffff !important;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.75rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      transition: color 0.3s ease-in-out;
+    }
+
+    .navbar-brand:hover {
+      color: #38bdf8 !important;
+    }
+
+    .nav-link {
+      color: #ffffff !important;
+      font-weight: 600;
+      margin-right: 15px;
+      position: relative;
+      transition: color 0.3s ease;
+    }
+
+    .nav-link:hover {
+      color: #38bdf8 !important;
+    }
+
+    .content-container {
+      margin: 140px auto 50px auto;
+      padding: 40px;
+      max-width: 900px;
+      background-color: #1e293b;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+      border-radius: 15px;
+      border-left: 5px solid #38bdf8;
+      border-right: 5px solid #38bdf8;
+      animation: fadeIn 1.2s ease-in-out;
+    }
+
+    h1 {
+      color: #0ea5e9;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 2.5rem;
+      font-weight: 700;
+      text-align: center;
+    }
+
+    .custom-button {
+      background: linear-gradient(135deg, #0ea5e9, #1e40af);
+      color: white;
+      border: none;
+      padding: 18px 40px;
+      font-size: 20px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      border-radius: 50px;
+      font-weight: bold;
+      text-transform: uppercase;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .custom-button:hover {
+      background: linear-gradient(135deg, #38bdf8, #1e40af);
+      transform: scale(1.1);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+    }
+
+    table {
+      width: 60%;
+      border-collapse: collapse;
+      margin: 20px auto;
+      background-color: #1e293b;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    th, td {
+      border: 1px solid #0ea5e9;
+      padding: 12px;
+      text-align: center;
+      color: #e2e8f0;
+    }
+
+    thead {
+      background: #0ea5e9;
+      font-weight: bold;
+      color: #fff;
+    }
+
+    tbody tr:nth-child(even) {
+      background-color: #172030;
+    }
+
+    tbody tr:hover {
+      background-color: #0f172a;
+    }
+
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+</style>
+  <script>
+    function copyCode(button) {
+      const codeBlock = button.nextElementSibling.innerText;
+      navigator.clipboard.writeText(codeBlock).then(() => {
+        button.innerHTML = '<i class="fas fa-check"></i>';
+        setTimeout(() => { button.innerHTML = '<i class="fas fa-copy"></i>'; }, 2000);
+      });
+    }
+  </script>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="https://mszabo4.github.io">
+        <img src="https://mszabo4.github.io/logo.png" alt="Logo" width="50">
+        Web de Miguel A.
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="https://mszabo4.github.io">Inici</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              Programació
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="https://mszabo4.github.io/cara">Cara interactiva</a>
+              <a class="dropdown-item" href="https://mszabo4.github.io/ocell">Ocell</a>
+              <a class="dropdown-item" href="https://mszabo4.github.io/wepray">We Pray</a>
+              <a class="dropdown-item" href="https://mszabo4.github.io/coldplay">Coldplay</a>
+              <a class="dropdown-item" href="https://mszaboo4.github.io/astronomia">Astronomia</a>
+              <a class="dropdown-item" href="https://mszabo4.github.io/openair">Openair</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-bs-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              Robòtica
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
+              <a class="dropdown-item" href="https://mszabo4.github.io/robotica/cdirecte">Cinemàtica
+                directa</a>
+              <a class="dropdown-item" href="https://mszabo4.github.io/robotica/cinversa">Cinemàtica
+                inversa</a>
+              <a class="dropdown-item" href="https://mszabo4.github.io/robotica/coldplay">Coldplay</a>
+              <a class="dropdown-item" href="https://mszabo4.github.io/robotica/arduino">Arduino</a>
+            </div>
+          </li>
+          <li class="nav-item">
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="content-container">
+  <p><strong>Pedro Diéguez Miguel Ángel Szabo</strong> - <em>6/06/2025</em></p>
+
+  <h1 class="text-center my-4" style="font-size: 3rem; color: #0ea5e9; text-shadow: 2px 2px #0f172a;">QUÈ HEM FET?</h1>
+
+  <p>
+    Primer de tot, vam crear el nostre codi font que es
+    basava en fer amb notes musicals amb Arduino i reproduir-les
+    amb un altaveu. La placa que vam utilitzar inicialment va ser la 
+    <strong>ESP32-S3 WROOM</strong>, aquesta va ser la primera de totes i també la primera que ens va donar errors. Els errors van ser els següents.
+  </p>
+
+  <h2 style="font-size: 2.2rem; color: #38bdf8; border-left: 6px solid #0ea5e9; padding-left: 15px;">Que significa l'error GND a Arduino?</h2>
+  <p>No és un error oficial del programari d'Arduino, sinó un <strong>problema habitual de maquinari</strong>.</p>
+  <p>Pot presentar-se de diverses formes:</p>
+
+  <h3 style="font-size: 1.6rem; color: #7dd3fc; margin-top: 25px;">1. Falta de connexió al GND</h3>
+  <p>Si connectes sensors o mòduls sense unir els seus GND amb el de l’Arduino, <strong>no hi ha una referència comuna de voltatge</strong>. Resultat: fallades aleatòries o mal funcionament.</p>
+
+  <h3 style="font-size: 1.6rem; color: #7dd3fc;">2. Connexions dolentes o cables solts</h3>
+  <p>Un GND mal connectat pot provocar errors de lectura, reinicis o fallades de comunicació.</p>
+
+  <h3 style="font-size: 1.6rem; color: #7dd3fc;">3. GNDs no compartits entre diferents fonts</h3>
+  <p>Si utilitzes, per exemple, una bateria i un USB sense unir els seus GNDs, els dispositius <strong>no “parlen el mateix idioma elèctric”</strong>.</p>
+
+  <h2 style="font-size: 2.2rem; color: #38bdf8; border-left: 6px solid #0ea5e9; padding-left: 15px; margin-top: 40px;">Què significa l'error "Exit Status"?</h2>
+
+  <p>L'<strong>exit status</strong> (o codi de sortida) és un número que un programa retorna al sistema operatiu quan acaba la seva execució.</p>
+
+  <p>En el cas de l'<strong>IDE d'Arduino</strong>, aquest missatge apareix quan alguna cosa falla durant la <strong>compilació</strong> o la <strong>càrrega del programa a la placa</strong>.</p>
+
+  <p>Per exemple:</p>
+  <ul>
+    <li><strong>exit status 0</strong>: Tot ha anat bé, sense errors.</li>
+    <li><strong>exit status 1</strong>: Hi ha hagut un error de compilació, com ara una ordre mal escrita, una llibreria que falta o un problema de sintaxi.</li>
+    <li><strong>exit status 255</strong>: Sol indicar un error greu, com que el port USB no està disponible.</li>
+  </ul>
+
+  <p>Aquest número per si sol no dona gaire informació; el més important és llegir el <strong>missatge d'error complet</strong> que apareix just abans a la consola de l'IDE. Allà trobaràs la causa real del problema.</p>
+
+  <h2 style="font-size: 2.2rem; color: #38bdf8; border-left: 6px solid #0ea5e9; padding-left: 15px; margin-top: 40px;">Quines plaques noves vam utilitzar?</h2>
+
+ <p>
+  A més de la <strong>ESP32-S3</strong>, també vam provar les <strong>Seeed XIAO</strong> i algunes de les seves variants. 
+  Tot i això, <strong>cap no ens va funcionar correctament</strong>:
+</p>
+
+<ul>
+  <li>La <strong>XIAO</strong> donava errors d'<code>exit status</code>.</li>
+  <li>Les altres <strong>ni apareixien al port COM</strong>.</li>
+</ul>
+
+<p>
+  Finalment, vam decidir <strong>canviar de microcontrolador (MU)</strong> per continuar desenvolupant el projecte.
+</p>
+</div>
+</body>
+</html>
