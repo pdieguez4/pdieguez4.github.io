@@ -25,13 +25,14 @@ const questions = [
     },
     {
         type: "questions", // Tipus de pregunta
-        category: "metrologia",
-        text: `Un dinamòmetre digital mostra el valor de la mesura amb cinc dígits i permet fer mesuraments entre 0 N i 10 000 N. La precisió és el valor més gran entre ± 0,1 % de la mesura i ± 5 N. Si la lectura del dinamòmetre és 3 500 N, el valor real de la mesura està comprès entre`,
+        category: "maquines",
+        text: `Una cinta transportadora de sacs es mou a 0,8 m/s. Si transporta 900 sacs cada hora,
+quina és la distància mitjana entre els sacs sobre la cinta?`,
         options: [
-            { text: "3500 N i 3505 N", value: "a" },
-            { text: "3496,5 N i 3503,5 N", value: "b" },
-            { text: "3495 N i 3505 N", value: "c" },
-            { text: "3497,5 N i 3502,5 N", value: "d" }
+            { text: "3,8 m", value: "a" },
+            { text: "3,6 m", value: "b" },
+            { text: "3,4 m", value: "c" },
+            { text: "3,2 m", value: "d" }
         ],
         correctAnswer: "c",
         steps: `
