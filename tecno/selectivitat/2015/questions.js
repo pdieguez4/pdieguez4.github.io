@@ -11,16 +11,16 @@ const questions = [
         ],
         correctAnswer: "c",
         steps: `
-            \\[
-            600 \\, \\frac{\\text{rev}}{\\text{min}} \\cdot \\frac{1 \\, \\text{min}}{60 \\, \\text{seg}}  = 10 \\, \\frac{\\text{rev}}{\\text{seg}}
-            \\]
-            \\[	
-            {n_{s}} = \\frac{\\text{&#402}}{\\text{p}} \\; \\text{&#8594} \\; \\text{p} = \\frac{\\text{&#402}}{{n_{s}}}
-            \\]
-            \\[
-            p = \\frac{50 \\, \\text{Hz}}{10\\, \\frac{\\text{rev}}{\\text{seg}}} \\, = 5 \\, p
-            \\]
-            <br><br>
+           \\[
+A = 5 \\, \\text{mm} \\times 5 \\, \\text{mm} = 25 \\, \\text{mm}^2 = 25 \\cdot 10^{-6} \\, \\text{m}^2
+\\]
+\\[
+\\sigma = \\frac{F}{A} = \\frac{9500 \\, \\text{N}}{25 \\cdot 10^{-6} \\, \\text{m}^2} = 3.8 \\cdot 10^8 \\, \\text{Pa}
+\\]
+\\[
+\\sigma = 380 \\, \\text{MPa} \\; \\rightarrow \\; \\text{Resposta correcta: c) 380 MPa}
+\\]
+<br><br>
             `
     },
     {
