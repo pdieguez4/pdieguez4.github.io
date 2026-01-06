@@ -1,13 +1,14 @@
 const questions = [
     {
         type: "questions", // Tipus de pregunta
-        category: "electrics",
-        text: `La velocitat de sincronisme n<sub>s</sub>, d’un motor asíncron de corrent altern, que està connectat a la xarxa de tensió U = 230 V i freqüència &#402 = 50 Hz, és n<sub>s</sub> = 600 min<sup>–1</sup>. Quants parells de pols té el motor?`,
+        category: "materials",
+        text: `Una barra quadrada massissa de 5 mm de gruix pot suportar una força axial de tracció
+màxima de 9,5 kN sense trencar-se. Quina és la resistència a la ruptura del material?`,
         options: [
-            { text: "2", value: "a" },
-            { text: "4", value: "b" },
-            { text: "5", value: "c" },
-            { text: "10", value: "d" }
+            { text: "3,8 MPa", value: "a" },
+            { text: "38 MPa", value: "b" },
+            { text: "380 MPa", value: "c" },
+            { text: "1900 MPa", value: "d" }
         ],
         correctAnswer: "c",
         steps: `
