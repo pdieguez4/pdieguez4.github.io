@@ -1,25 +1,53 @@
 const questions = [
-    {
+{
+        type: "exercicis",
+        category: "energia",
+        text: `S’han instal·lat \\(n = 50\\) aerogeneradors de 3 pales en un parc eòlic. 
+               El diàmetre de l’àrea d’escombratge de les pales és \\(d = 77 \\, \\text{m}\\) i el rendiment dels aerogeneradors \\(\\eta_{\\text{aerog}} = 0{,}68\\). 
+               S’estima que la velocitat mitjana del vent al parc és \\(v = 25 \\, \\text{km/h}\\); el parc està en funcionament 300 dies a l’any i obté energia 18 hores diàries. 
+               La potència mitjana del vent \\(P_{\\text{vent}}\\) es pot estimar, per a un aerogenerador, com l’energia cinètica del vent per unitat de temps mitjançant l’expressió:
+               \\[
+               P_{\\text{vent}} = \\frac{1}{2} \\rho A v^3
+               \\]
+               en què \\(A\\) és l’àrea que escombren les pales de l’aerogenerador, \\(\\rho\\) és la densitat de l’aire i \\(v\\) és la velocitat del vent. 
+               D’aquesta potència, el coeficient d’aprofitament del vent és \\(c_a = 0{,}42\\).
+               
+               Sabent que \\(1{,}225 \\, \\text{g}\\) d’aire ocupen un volum d’\\(1 \\, \\text{m}^3\\), determineu:
+               <br><strong>a)</strong> La potència mitjana del vent \\(P_{\\text{vent}}\\) per a un aerogenerador. [0,5 punts]
+               <br><strong>b)</strong> La potència elèctrica útil \\(P_{\\text{útil}}\\) que generarà cada aerogenerador. [0,5 punts]
+               <br><strong>c)</strong> L’energia elèctrica total \\(E_{\\text{total}}\\) que es generarà al parc durant un any. [0,5 punts]
+               <br><strong>d)</strong> Els ingressos que tindrà el parc eòlic si el preu de venda de l’energia eòlica és \\(p_{\\text{venda}} = 7{,}624\\) cèntims d’euro per \\(\\text{kWh}\\). [0,5 punts]
+               <br><strong>e)</strong> En quin percentatge disminuirien els ingressos anteriors si la velocitat mitjana del vent es reduís un 10 %.
+               <br><br>
+               <img src="ruta/a/imatgePregunta.jpg" alt="Imatge relacionada amb la pregunta">`,  // Imatge opcional al final de la pregunta
+        correctAnswer: "",  // No és necessari aquí perquè es tracta d'un exercici obert
         type: "questions", // Tipus de pregunta
         category: "electrics",
-        text: `La velocitat de sincronisme n<sub>s</sub>, d’un motor asíncron de corrent altern, que està connectat a la xarxa de tensió U = 230 V i freqüència &#402 = 50 Hz, és n<sub>s</sub> = 600 min<sup>–1</sup>. Quants parells de pols té el motor?`,
+        text: `Una barra quadrada massissa de 5 mm de gruix pot suportar una força axial de tracció màxima de 9,5 kN sense trencar-se. Quina és la resistència a la ruptura del material?`,
         options: [
-            { text: "2", value: "a" },
-            { text: "4", value: "b" },
-            { text: "5", value: "c" },
-            { text: "10", value: "d" }
+            { text: " 3,8 MPa", value: "a" },
+            { text: "38 MPa", value: "b" },
+            { text: "380 MPa", value: "c" },
+            { text: " 1 900 MPa", value: "d" }
         ],
         correctAnswer: "c",
-        steps: `
-            \\[
+steps: `
+            <strong>a) Càlcul de la potència mitjana del vent \\(P_{\\text{vent}}\\) per a un aerogenerador:</strong>
+            <br>
+            - Àrea d’escombratge de les pales:
+           \\[
+            A = \\frac{\\pi d^2}{4} = \\frac{\\pi \\times (77 \\, \\text{m})^2}{4} = 4657{,}7 \\, \\text{m}^2
             600 \\, \\frac{\\text{rev}}{\\text{min}} \\cdot \\frac{1 \\, \\text{min}}{60 \\, \\text{seg}}  = 10 \\, \\frac{\\text{rev}}{\\text{seg}}
             \\]
             \\[	
             {n_{s}} = \\frac{\\text{&#402}}{\\text{p}} \\; \\text{&#8594} \\; \\text{p} = \\frac{\\text{&#402}}{{n_{s}}}
-            \\]
-            \\[
+           \\]
+            - Densitat de l’aire:
+           \\[
+            \\rho = \\frac{1{,}225 \\, \\text{g}}{\\text{m}^3} = 1{,}225 \\, \\frac{\\text{kg}}{\\text{m}^3}
             p = \\frac{50 \\, \\text{Hz}}{10\\, \\frac{\\text{rev}}{\\text{seg}}} \\, = 5 \\, p
-            \\]
+           \\]
+            - Velocitat del vent (en \\(\\text{m/s}\\)):
             <br><br>
             `
     },
@@ -35,24 +63,45 @@ const questions = [
         ],
         correctAnswer: "c",
         steps: `
-            \\[
+           \\[
+            v = \\frac{25 \\, \\text{km/h}}{3{,}6} = 6{,}94 \\, \\text{m/s}
             0{,}1 \\, \\% = 0{,}001
-            \\]
-            \\[
+           \\]
+            - Potència del vent:
+           \\[
+            P_{\\text{vent}} = \\frac{1}{2} \\times 1{,}225 \\, \\frac{\\text{kg}}{\\text{m}^3} \\times 4657{,}7 \\, \\text{m}^2 \\times (6{,}94 \\, \\text{m/s})^3 = 828{,}08 \\, \\text{kW}
             3500 \\, \\text{N} \\cdot 0{,}001 = 3{,}5 \\, \\text{N}
-            \\]
-            \\[
+           \\]
+            <br>
+            <strong>b) Potència elèctrica útil \\(P_{\\text{útil}}\\) generada per cada aerogenerador:</strong>
+            <br>
+            - Aplicant el rendiment de l’aerogenerador:
+           \\[
+            P_{\\text{útil}} = P_{\\text{vent}} \\times \\eta_{\\text{aerog}} \\times c_a = 828{,}08 \\, \\text{kW} \\times 0{,}68 \\times 0{,}42 = 236{,}62 \\, \\text{kW}
             3{,}5 \\, \\text{N} \\, \\text{<} \\, 5 \\, \\text{N}
-            \\]
-            \\[
+           \\]
+            <br>
+            <strong>c) Energia elèctrica total \\(E_{\\text{total}}\\) generada al parc durant un any:</strong>
+            <br>
+            - Nombre total d'hores operatives a l'any:
+           \\[
+            h = 300 \\, \\text{dies/any} \\times 18 \\, \\text{h/dia} = 5400 \\, \\text{h/any}
             \\text{Mesurament mínim} = 3500 \\text{N} - 5 \\, \\text{N} = 3495 \\, \\text{N}
-            \\]
-            \\[
+           \\]
+            - Energia generada per un aerogenerador:
+           \\[
+            E_{\\text{útil}} = P_{\\text{útil}} \\times h = 236{,}62 \\, \\text{kW} \\times 5400 \\, \\text{h} = 1277{,}75 \\, \\text{MWh/any}
             \\text{Mesurament màxim} = 3500 \\text{N} + 5 \\, \\text{N} = 3505 \\, \\text{N}
-            \\]
-            \\[
+           \\]
+            - Energia total generada per 50 aerogeneradors:
+           \\[
+            E_{\\text{total}} = 1277{,}75 \\, \\text{MWh/any} \\times 50 = 63{,}89 \\, \\text{GWh/any}
             \\text{Interval} : [3495 \\, \\text{N} \\, {,} \\, 3505 \\, \\text{N}]
-            \\]
+           \\]
+            <br>
+            <strong>d) Ingressos del parc eòlic:</strong>
+            <br>
+            - Ingressos totals:
             <br><br>
             `,
     },
@@ -68,15 +117,24 @@ const questions = [
         ],
         correctAnswer: "d",
         steps: `
-            \\[
+           \\[
+            Ingressos = E_{\\text{total}} \\times p_{\\text{venda}} = 63{,}89 \\, \\text{GWh/any} \\times 7{,}624 \\, \\text{cèntims/kWh} = 4865{,}9 \\, \\text{k€}
             \\text{% de Zinc} = 100 - \\text{Al} -\\, \\text{Cu} -\\, \\text{Mg} = 100 - 4 - 1 - 0{,}05 = 94{,}95 \\%
-            \\]
-            \\[
+           \\]
+            <br>
+            <strong>e) Impacte d'una reducció del 10 % en la velocitat del vent:</strong>
+            <br>
+            - Nova velocitat del vent:
+           \\[
+            v_{nou} = 0{,}9 \\times v = 0{,}9 \\times 6{,}94 \\, \\text{m/s} = 6{,}25 \\, \\text{m/s}
             \\text{Massa total} = 400 \\, \\text{kg} \\cdot \\frac{94{,}95}{100} = 421{,}3 \\, \\text{kg}
-            \\]
-            \\[
+           \\]
+            - Nova potència del vent:
+           \\[
+            P_{\\text{vent, nou}} = \\frac{1}{2} \\times 1{,}225 \\, \\frac{\\text{kg}}{\\text{m}^3} \\times 4657{,}7 \\, \\text{m}^2 \\times (6{,}25 \\, \\text{m/s})^3 = 654{,}8 \\, \\text{kW}
             \\text{Al necessari} = 421{,}3 \\cdot \\frac{4}{100} = 16{,}85 \\, \\text{kg}
-            \\]
+           \\]
+            - Nova potència útil:
             <br><br>
             `,
     },
@@ -92,10 +150,13 @@ const questions = [
         ],
         correctAnswer: "a",
         steps: `
-            \\[
+           \\[
+            P_{\\text{útil, nou}} = 654{,}8 \\, \\text{kW} \\times 0{,}68 \\times 0{,}42 = 187{,}19 \\, \\text{kW}
             
-            \\]
-            \\[
+           \\]
+            - Nova energia total:
+           \\[
+            E_{\\text{total, nou}} = 187{,}19 \\, \\text{kW} \\times 5400 \\, \\text{h} \\times 50 = 50{,}7 \\, \\text{GWh/any}
             \\text{JMax} =  \\text{ds} - \\text{di}^{'} = 21 - (-20) = 41 \\; \\text{µm}
             \\]
             \\[
@@ -118,26 +179,38 @@ const questions = [
         steps: `
             \\[
             \\text{Rebuig al fresatge:} \\, 4 \\, \\% \\; \\text{&#8594} \\; \\text{Peces bones:} \\, 96 \\%
-            \\]
-            \\[
+           \\]
+            - Nous ingressos:
+           \\[
+            Ingressos_{nou} = 50{,}7 \\, \\text{GWh/any} \\times 7{,}624 \\, \\text{cèntims/kWh} = 3865{,}58 \\, \\text{k€}
             \\text{Rebuig a la rectificació:} \\, 3 \\, \\% \\; \\text{&#8594} \\; \\text{Peces bones:} \\, 97 \\%
-            \\]
-            \\[
+           \\]
+            - Percentatge de disminució:
+           \\[
+            \\frac{4865{,}9 - 3865{,}58}{4865{,}9} \\times 100 \\approx 20{,}6\\%
             0,96 \\cdot 0,97 = 0,9312 = 93,12 \\, \\%
-            \\]
-            <br><br>
+           \\]
+           <br><br>
+            <img src="ruta/a/imatgeResposta.jpg" alt="Imatge relacionada amb la resposta">`,  // Imatge opcional al final de la resposta
             `,
-    },
-    {
-        type: "questions", // Tipus de pregunta
+},
+{
+type: "questions", // Tipus de pregunta
+        category: "energia",
+        text: `Un rentaplats ha consumit \\(0{,}9 \\, \\text{kWh}\\) d’energia elèctrica per a escalfar \\(11 \\, \\text{L}\\) d’aigua des d’una temperatura ambient \\(T_{amb} = 10 \\, ^\\circ \\text{C}\\) a una temperatura \\(T = 70 \\, ^\\circ \\text{C}\\). La calor específica de l’aigua és \\(c_e = 4{,}18 \\, \\frac{\\text{J}}{\\text{g} \\cdot ^\\circ \\text{C}}\\). El rendiment del rentaplats és:`,
         category: "organitzacio",
         text: `Un tren d'alta velocitat ha transportat durant un any 3,2 milions de passatgers. El tren està format per 8 vagons i té una capacitat nominal total de 405 passatgers. Si el tren fa 28 trajectes diaris, quin ha estat el percentatge d’ocupació mitjana del tren?`,
-        options: [
+options: [
+            { text: "11,74 %", value: "a" },
+            { text: "27,59 %", value: "b" },
+            { text: "76,63 %", value: "c" },
+            { text: "85,15 %", value: "d" }
             { text: "9,7 %", value: "a" },
             { text: "77,3 %", value: "b" },
             { text: "37 %", value: "c" },
             { text: "39,1 %", value: "d" }
-        ],
+],
+        correctAnswer: "d",
         correctAnswer: "b",
         steps: `
             \\[
@@ -181,13 +254,15 @@ const questions = [
             { text: "3,569 m", value: "d" }
         ],
         correctAnswer: "c",
-        steps: `
-            \\[
+steps: `
+           \\[
+            m = 11 \\, \\text{L} \\times 1000 \\, \\text{g/L} = 11000 \\, \\text{g}
             A = \\pi r^2 = \\pi (3{,}05 \\cdot 10^{-4})^2 = 2{,}922 \\cdot 10^{-7}
-            \\]
-            \\[
+           \\]
+           \\[
+            \\Delta T = 70 \\, ^\\circ \\text{C} - 10 \\, ^\\circ \\text{C} = 60 \\, ^\\circ \\text{C}
             L = \\frac{R\\cdot A}{\\rho} = \\frac{4{,}7 \\cdot 2{,}922\\cdot 10^{−7}}{0{,}49 \\cdot 10^{-6}} = 2{,}803 \\; \\text{m}
-            \\]
+           \\]
             <br><br>
             `,
     },
@@ -203,22 +278,28 @@ const questions = [
         ],
         correctAnswer: "c",
         steps: `
-            \\[
+           \\[
+            Q = m \\times c_e \\times \\Delta T
             t_{marítim} = \\frac{1760}{33} = 53,3 \\, \\text{h}
-            \\]
-            \\[
+           \\]
+           \\[
+            Q = 11000 \\, \\text{g} \\times 4{,}18 \\, \\frac{\\text{J}}{\\text{g} \\cdot ^\\circ \\text{C}} \\times 60 \\, ^\\circ \\text{C}
             C_{marítim} = 1760 \\cdot 0,87 = 1531,2 \\, \\text{&#8364}
-            \\]
-            \\[
+           \\]
+           \\[
+            Q = 11000 \\times 4{,}18 \\times 60 = 2{,}7588 \\times 10^6 \\, \\text{J}
             t_{carretera} = \\frac{1050}{35} = 30 \\, \\text{h}
-            \\]
-            \\[
+           \\]
+           \\[
+            W = 0{,}9 \\, \\text{kWh} \\times 3600000 \\, \\text{J/kWh} = 3240000 \\, \\text{J}
             C_{carretera} = 1050 \\cdot 1,69 = 1774,5 \\, \\text{&#8364}
-            \\]
-            \\[
+           \\]
+           \\[
+            \\eta = \\frac{Q}{W} \\times 100
             t_{ferroviari} = \\frac{1160}{50} = 23,2 \\, \\text{h}
-            \\]
-            \\[
+           \\]
+           \\[
+            \\eta = \\frac{2{,}7588 \\times 10^6}{3{,}24 \\times 10^6} \\times 100 = 85{,}15 \\, \\%
             C_{ferroviari} = 1160 \\cdot 1,03 = 1194,8 \\, \\text{&#8364}
             \\]
             \\[
@@ -226,8 +307,10 @@ const questions = [
             \\]
             \\[
             \\text{Més econòmic: transport ferroviari}
-            \\]
-            <br><br>
+           \\]
+           <br><br>
+            <img src="ruta/a/imatgeResposta.jpg" alt="Imatge relacionada amb la resposta">`,  // Imatge opcional al final de la resposta
+        images: `<img src="ruta/a/imatgePregunta.jpg" alt="Imatge relacionada amb la pregunta">`  // Imatge opcional al final de la pregunta
 
             `,
     },
@@ -254,10 +337,11 @@ const questions = [
             \\]
             <br><br>
             `,
-    },
-    {
-        type: "questions", // Tipus de pregunta
-        category: "materials",
+},
+{
+type: "questions", // Tipus de pregunta
+category: "materials",
+        text: `Una família que anualment generava 525 kg d’envasos, en un any ha aconseguit reduir aquesta quantitat un 60 %. Quina reducció en emissions de GEH ha obtingut respecte a l’any anterior, tenint en compte que el factor d’emissió dels envasos és de 120,09 g CO2eq/kg residu?`,
         text: `El límit elàstic d'un aliatge d'alumini és σ<sub>e</sub> = 85 MPa. Si una peça cilíndrica d'aquest material està sotmesa a una força de tracció de 1 400 N, quin és el diàmetre mínim que ha de tenir la secció perquè no es produeixi deformació plàstica?`,
         options: [
             { text: "3,24 mm", value: "a" },
@@ -346,33 +430,43 @@ const questions = [
         type: "questions", // Tipus de pregunta
         category: "metrologia",
         text: `En un circuit elèctric, es connecten en paral·lel dues resistències de 30 Ω cadascuna i toleràncies de ± 2 % i ± 5 %, respectivament. Entre quins valors es troba la resistència equivalent?`,
-        options: [
+options: [
+            { text: "25,22 kg CO2eq", value: "a" },
+            { text: "37,83 kg CO2eq", value: "b" },
+            { text: "63,05 kg CO2eq", value: "c" },
+            { text: "88,27 kg CO2eq", value: "d" }
             { text: "57,90 Ω i 62,10 Ω", value: "a" },
             { text: "14,47 Ω i 15,52 Ω", value: "b" },
             { text: "14,25 Ω i 15,75 Ω", value: "c" },
             { text: "57 Ω i 63 Ω", value: "d" }
-        ],
-        correctAnswer: "b",
-        steps: `
+],
+correctAnswer: "b",
+steps: `
             \\[	
             R_{1_{min}} = 30 - 2\\; \\% = 30(100 - 2)\\; \\% = 30 \\; \\cdot \\; 98 \\;\\% = 30 \\; \\cdot \\; 0{,}98 = 29{,}4 \\; \\text{Ω}
             \\]
-            \\[
+           \\[
+            \\text{Quantitat inicial d’envasos} = 525 \\, \\text{kg}
             R_{1_{max}} = 30 + 2\\; \\% = 30(100 + 2)\\; \\% = 30 \\; \\cdot \\; 102 \\;\\% = 30 \\; \\cdot \\; 1{,}02 = 30{,}6 \\; \\text{Ω}
-            \\]
-            \\[
+           \\]
+           \\[
+            \\text{Percentatge de reducció} = 60\\%
             R_{2_{min}} = 30 - 5\\; \\% = 30(100 - 5)\\; \\% = 30 \\; \\cdot \\; 95 \\;\\% = 30 \\; \\cdot \\; 0{,}95 = 28{,}5 \\; \\text{Ω}
-            \\]
-            \\[
+           \\]
+           \\[
+            \\text{Quantitat reduïda} = 525 \\, \\text{kg} \\times 0{,}60 = 315 \\, \\text{kg}
             R_{2_{max}} = 30 + 5\\; \\% = 30(100 + 5)\\; \\% = 30 \\; \\cdot \\; 105 \\;\\% = 30 \\; \\cdot \\; 1{,}05 = 31{,}5 \\; \\text{Ω}
-            \\]
-            \\[
+           \\]
+           \\[
+            \\text{Quantitat de residu restant} = 525 \\, \\text{kg} - 315 \\, \\text{kg} = 210 \\, \\text{kg}
 
-            \\]
-            \\[
+           \\]
+           \\[
+            \\text{Emissions inicials} = 525 \, \\text{kg} \\times 120{,}09 \, \\text{g CO2eq/kg}
             R_{min} = \\frac{R_{1_{min}} \\cdot R_{2_{min}}}{R_{1_{min}} + R_{2_{min}}} = \\frac{29,4 \\cdot 28,5}{29,4 + 28,5} = 14,47 \\; \\Omega
-            \\]
-            \\[
+           \\]
+           \\[
+            \\text{Emissions inicials} = 63047,25 \, \\text{g CO2eq}
             R_{max} = \\frac{R_{1_{max}} \\cdot R_{2_{max}}}{R_{1_{max}} + R_{2_{max}}} = \\frac{30,6 \\cdot 31,5}{30,6 + 31,5} = 15,52 \\; \\Omega
             \\]
             <br><br>
@@ -392,11 +486,13 @@ const questions = [
         steps: `
             \\[	
             {V_{Cilindre}} = \\frac{C_{total}}{N_{cilindres}} = \\frac{2792}{6} = 465,33 \\; \\text{cm}^{3}
-            \\]
-            \\[
+           \\]
+           \\[
+            \\text{Emissions inicials} = 63{,}05 \, \\text{kg CO2eq}
             V = \\frac{\\pi \\cdot D^{2}}{4} \\cdot C \\; \\text{&#8594} \\; D = \\sqrt{\\frac{V \\cdot 4}{\\pi \\cdot C}}
-            \\]
-            \\[
+           \\]
+           \\[
+            \\text{Emissions després de la reducció} = 210 \, \\text{kg} \\times 120{,}09 \, \\text{g CO2eq/kg}
             D = \\sqrt{\\frac{V \\cdot 4}{\\pi \\cdot C}} = \\sqrt{\\frac{465,33 \\cdot 4}{\\pi \\cdot 9}} = 8,114 \\; \\text{cm} = 81{,}14 \\; \\text{mm}
             \\]
             <br><br>
@@ -416,13 +512,15 @@ const questions = [
         steps: `
             \\[	
             V = \\frac{m}{\\rho} = \\frac{2,9}{0,75} = 3,57 \\; \\text{L/Volta}
-            \\]
-            \\[
+           \\]
+           \\[
+            \\text{Emissions després de la reducció} = 25218{,}9 \, \\text{g CO2eq}
             C_{1\\; \\text{km}} = \\frac{V}{d} = \\frac{3,87 \\; \\text{L/Volta}}{5,543 \\; \\text{km}} = 0,698 \\; \\text{L/km}
-            \\]
-            \\[
+           \\]
+           \\[
+            \\text{Emissions després de la reducció} = 25{,}22 \, \\text{kg CO2eq}
             C_{100\\; \\text{km}} = 0,698 \\; \\cdot \\; 100 = 69,8 \\; \\text{L/100 km}
-            \\]
+           \\]
             <br><br>
             `,
     },  
@@ -434,7 +532,7 @@ const questions = [
         carretera, el semàfor dels cotxes també canvia a vermell si com a mínim fa un minut que és
         verd i, a més, un vianant prem el polsador que incorpora el mateix semàfor. Responeu a les
         qüestions que hi ha a continuació utilitzant les variables d'estat següents:
-               <img src="https://ecastro4.github.io/tecno/selectivitat/2017/Ex1/imatgePregunta.png" alt="Imatge relacionada amb la pregunta" width="900">
+               <img src="https://pdieguez4.github.io/tecno/selectivitat/2015/Ex1/imatgePregunta.png" alt="Imatge relacionada amb la pregunta" width="900">
               
                <br><strong>a)</strong> Elaboreu la taula de veritat del sistema. [1 punt]
                <br><strong>b)</strong> Determineu la funció lògica entre aquestes variables i, si escau, simplifiqueu-la. [1 punt]
@@ -443,13 +541,13 @@ const questions = [
                `, 
         correctAnswer: "",  // No és necessari aquí perquè es tracta d'un exercici obert
         steps: `
-            <img src="https://ecastro4.github.io/tecno/selectivitat/2017/Ex1/imatgeResposta.png" alt="Imatge relacionada amb la resposta" width="900">`,  // Imatge opcional al final de la resposta
+            <img src="https://pdieguez4.github.io/tecno/selectivitat/2015/Ex1/imatgeResposta.png" alt="Imatge relacionada amb la resposta" width="900">`,  // Imatge opcional al final de la resposta
     },
     {
         type: "exercicis",
         category: "materials",
         text: `
-        <img src="https://ecastro4.github.io/tecno/selectivitat/2017/Ex2/imatgePregunta.png" alt="Imatge relacionada amb la pregunta" width="900">
+        <img src="https://pdieguez4.github.io/tecno/selectivitat/2015/Ex2/imatgePregunta.png" alt="Imatge relacionada amb la pregunta" width="900">
 
         Es vol construir una estrella de sis puntes com la de la figura a partir d'un tauler de fusta.
 L'estrella es pot construir a partir de triangles equilàters o de rombes com els que es mostren
@@ -494,9 +592,10 @@ per exemple, una estrella). Determineu:
             <br>
             <strong>c) Perímetre tallat \\(p_{\\text{E}}\\) de l'estrella (perfil exterior):</strong>
             <br>
-            \\[
+           \\[
+            \\text{Reducció en emissions} = 63{,}05 \, \\text{kg CO2eq} - 25{,}22 \, \\text{kg CO2eq} = 37{,}83 \, \\text{kg CO2eq}
             p_{\\text{E}} = 12 \\cdot b = 12 \\cdot 0{,}3 = 3{,}6 \\, \\text{m}
-            \\]
+           \\]
             <br>
             <strong>d) Superfície \\(s\\), costos \\(c_{\text{T}}, c_{\text{R}}, c_{\text{E}}\\) i opció més econòmica:</strong>
             <br>
@@ -516,7 +615,11 @@ per exemple, una estrella). Determineu:
             c_{\\text{E}} = (15 \\cdot 0{,}4677) + (1{,}4 \\cdot 3{,}6) = 7{,}016 + 5{,}04 = 12{,}06 \\, \\text{€}
             \\]
             - <strong>Conclusió:</strong> L'opció més econòmica és la construcció a partir de <strong>6 rombes</strong> amb un cost d'<strong>11,34 €</strong>.
-            <br><br>
+           <br><br>
+            <img src="ruta/a/imatgeResposta.jpg" alt="Imatge relacionada amb la resposta">`,  // Imatge opcional al final de la resposta
+        images: `<img src="ruta/a/imatgePregunta.jpg" alt="Imatge relacionada amb la pregunta">`  // Imatge opcional al final de la pregunta
+    }
+];
             `
     },
     {
@@ -582,7 +685,7 @@ passives a l'elevador es consideren negligibles, determineu:
         type: "exercicis",
         category: "maquines",
         text: `
-        <img src="https://ecastro4.github.io/tecno/selectivitat/2017/Ex4/imatgePregunta.png" alt="Imatge relacionada amb la pregunta" width="900">
+        <img src="https://pdieguez4.github.io/tecno/selectivitat/2015/Ex4/imatgePregunta.png" alt="Imatge relacionada amb la pregunta" width="900">
         La placa d’alumini de la figura, de gruix
 \\(e = 5 \\; \\text{mm}\\), està articulada a terra en el punt
 O. Per a mantenir-la en repòs s’utilitza un
@@ -602,7 +705,7 @@ densitat de l’alumini és \\(ρ_{alumini} = 2 710 kg/m^{3}\\) i el mòdul elà
         correctAnswer: "",  // No és necessari aquí perquè es tracta d'un exercici obert
         steps: `
             <strong>a) Diagrama del cos lliure:</strong>
-            <img src="https://ecastro4.github.io/tecno/selectivitat/2017/Ex4/imatgeResposta.png" alt="Imatge relacionada amb la resposta" width="900">
+            <img src="https://pdieguez4.github.io/tecno/selectivitat/2015/Ex4/imatgeResposta.png" alt="Imatge relacionada amb la resposta" width="900">
 
             <strong>b) Massa de la placa:</strong>
             <br>
