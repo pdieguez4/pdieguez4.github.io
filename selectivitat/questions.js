@@ -1,7 +1,7 @@
 const questions = [
     {
         type: "questions", // Tipus de pregunta
-        category: "electrics",
+        category: "materials",
         text: `Una barra quadrada massissa de 5 mm de gruix pot suportar una força axial de tracció màxima de 9,5 kN sense trencar-se. Quina és la resistència a la ruptura del material?`,
         options: [
             { text: " 3,8 MPa", value: "a" },
