@@ -423,7 +423,7 @@ v = 0.8 \\, \\frac{\\text{m}}{\\text{s}}, \\quad 900 \\, \\text{sacs/hora} = \\f
         carretera, el semàfor dels cotxes també canvia a vermell si com a mínim fa un minut que és
         verd i, a més, un vianant prem el polsador que incorpora el mateix semàfor. Responeu a les
         qüestions que hi ha a continuació utilitzant les variables d'estat següents:
-               <img src="https://pdieguez4.github.io/tecno/selectivitat/2017/Ex1/imatgePregunta.png" alt="Imatge relacionada amb la pregunta" width="900">
+               <img src="https://pdieguez4.github.io/tecno/selectivitat/2015/Ex1/imatgePregunta.png" alt="Imatge relacionada amb la pregunta" width="900">
               
                <br><strong>a)</strong> Elaboreu la taula de veritat del sistema. [1 punt]
                <br><strong>b)</strong> Determineu la funció lògica entre aquestes variables i, si escau, simplifiqueu-la. [1 punt]
@@ -432,13 +432,13 @@ v = 0.8 \\, \\frac{\\text{m}}{\\text{s}}, \\quad 900 \\, \\text{sacs/hora} = \\f
                `, 
         correctAnswer: "",  // No és necessari aquí perquè es tracta d'un exercici obert
         steps: `
-            <img src="https://pdieguez4.github.io/tecno/selectivitat/2017/Ex1/imatgeResposta.png" alt="Imatge relacionada amb la resposta" width="900">`,  // Imatge opcional al final de la resposta
+            <img src="https://pdieguez4.github.io/tecno/selectivitat/2015/Ex1/imatgeResposta.png" alt="Imatge relacionada amb la resposta" width="900">`,  // Imatge opcional al final de la resposta
     },
     {
         type: "exercicis",
         category: "materials",
         text: `
-        <img src="https://pdieguez4.github.io/tecno/selectivitat/2017/Ex2/imatgePregunta.png" alt="Imatge relacionada amb la pregunta" width="900">
+        <img src="https://pdieguez4.github.io/tecno/selectivitat/2015/Ex2/imatgePregunta.png" alt="Imatge relacionada amb la pregunta" width="900">
 
         Es vol construir una estrella de sis puntes com la de la figura a partir d'un tauler de fusta.
 L'estrella es pot construir a partir de triangles equilàters o de rombes com els que es mostren
@@ -571,7 +571,7 @@ passives a l'elevador es consideren negligibles, determineu:
         type: "exercicis",
         category: "maquines",
         text: `
-        <img src="https://pdieguez4.github.io/tecno/selectivitat/2017/Ex4/imatgePregunta.png" alt="Imatge relacionada amb la pregunta" width="900">
+        <img src="https://pdieguez4.github.io/tecno/selectivitat/2015/Ex4/imatgePregunta.png" alt="Imatge relacionada amb la pregunta" width="900">
         La placa d’alumini de la figura, de gruix
 \\(e = 5 \\; \\text{mm}\\), està articulada a terra en el punt
 O. Per a mantenir-la en repòs s’utilitza un
@@ -591,7 +591,7 @@ densitat de l’alumini és \\(ρ_{alumini} = 2 710 kg/m^{3}\\) i el mòdul elà
         correctAnswer: "",  // No és necessari aquí perquè es tracta d'un exercici obert
         steps: `
             <strong>a) Diagrama del cos lliure:</strong>
-            <img src="https://pdieguez4.github.io/tecno/selectivitat/2017/Ex4/imatgeResposta.png" alt="Imatge relacionada amb la resposta" width="900">
+            <img src="https://pdieguez4.github.io/tecno/selectivitat/2015/Ex4/imatgeResposta.png" alt="Imatge relacionada amb la resposta" width="900">
 
             <strong>b) Massa de la placa:</strong>
             <br>
