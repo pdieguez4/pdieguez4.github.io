@@ -269,6 +269,7 @@ circular de 140 mm de diàmetre i 1,3 m de llargària? (Preneu g = 10 m/s².)`,
     category: "metrologia",
     text: `En el plànol de la figura, les toleràncies per a les dimensions angulars són ±0° 30' per a α1 i ±0° 20' per a α2. 
 Quina és la tolerància per a β
+
 <img src="https://pdieguez4.github.io/tecno/selectivitat/2015/imatges/imatgeQuestio.png" alt="Imatge relacionada amb la pregunta" width="350">`
 
         ,
@@ -510,7 +511,7 @@ I = \\frac{P}{U} = 10,43 \\text{ A}
 <strong>b) Resistència \\(R\\) i longitud del conductor \\(L\\):</strong>
 <br>
 \\[
-R = \frac{U^2}{P} = \\frac{\\rho \\cdot L}{A} \\implies L = \\frac{U^2 \\cdot A}{P \\cdot \\rho} = 2,802 \\text{ m}
+R = \\frac{U^2}{P} = \\frac{\\rho \\cdot L}{A} \\implies L = \\frac{U^2 \\cdot A}{P \\cdot \\rho} = 2,802 \\text{ m}
 \\]
 <br>
 <strong>c) Superfície total:</strong>
