@@ -137,13 +137,13 @@ que permet suportar aquest tipus de palets, de qualsevol massa autoritzada i sen
     correctAnswer: "c",
 steps: `
 
-\\[ \text{Palets al llarg} = \text{trunc}\left(\frac{2700}{800}\right) = 3 \text{ palets} \\]
+\\[ \\text{Palets al llarg} = \\text{trunc}\\left(\\frac{2700}{800}\\right) = 3 \\text{ palets} \\]
 
-\\[ \text{Palets al fons} = \text{trunc}\left(\frac{1350}{1200}\right) = 1 \text{ palet} \\]
+\\[ \\text{Palets al fons} = \\text{trunc}\\left(\\frac{1350}{1200}\\right) = 1 \\text{ palet} \\]
 
-\\[ \text{Total palets per prestatge} = 3 \cdot 1 = 3 \text{ palets} \\]
+\\[ \\text{Total palets per prestatge} = 3 \\cdot 1 = 3 \\text{ palets} \\]
 
-\\[ \text{Massa suportada} = 3 \cdot 1000 = 3.000 , \text{kg} \\]
+\\[ \\text{Massa suportada} = 3 \\cdot 1000 = 3.000 , \\text{kg} \\]
 
 
 <br><br>
@@ -213,9 +213,9 @@ del cargol?`,
     correctAnswer: "d",
     steps: `
 
-\\[ n = \frac{200}{60} = 3,333... \text{ s}^{-1} \\]
-\\[ p = \frac{v}{n} = \frac{5}{3,333...} \\]
-\\[ p = 1,5 , \text{ mm/volta} \\]
+\\[ n = \\frac{200}{60} = 3,333... \\text{ s}^{-1} \\]
+\\[ p = \\frac{v}{n} = \\frac{5}{3,333...} \\]
+\\[ p = 1,5 , \\text{ mm/volta} \\]
 <br><br>
     `,
 },
@@ -233,10 +233,10 @@ Quin és el joc mínim d’aquest ajust?`,
     correctAnswer: "a",
     steps: `
 
-\\[ \text{Desviació inferior del forat (EI)} = +145 , \mu\text{m} \\]
-\\[ \text{Desviació superior de l'eix (es)} = 0 , \mu\text{m} \\]
-\\[ J_{mín} = \text{EI} - \text{es} \\]
-\\[ J_{mín} = 145 - 0 = 145 , \mu\text{m} \\]
+\\[ \\text{Desviació inferior del forat (EI)} = +145 , \\mu\\text{m} \\]
+\\[ \\text{Desviació superior de l'eix (es)} = 0 , \\mu\\text{m} \\]
+\\[ J_{mín} = \\text{EI} - \\text{es} \\]
+\\[ J_{mín} = 145 - 0 = 145 , \\mu\\text{m} \\]
 <br><br>
     `,
 },
@@ -254,21 +254,21 @@ circular de 140 mm de diàmetre i 1,3 m de llargària? (Preneu g = 10 m/s².)`,
     correctAnswer: "b",
     steps: `
 
-\\[ \text{Secció (A)} = \pi \cdot r^2 = \pi \cdot 0,07^2 \approx 0,015394 , \text{m}^2 \\]
+\\[ \\text{Secció (A)} = \\pi \\cdot r^2 = \\pi \\cdot 0,07^2 \\approx 0,015394 , \\text{m}^2 \\]
 
-\\[ \text{Volum (V)} = A \cdot L = 0,015394 \cdot 1,3 \approx 0,020012 , \text{m}^3 \\]
+\\[ \\text{Volum (V)} = A \\cdot L = 0,015394 \\cdot 1,3 \\approx 0,020012 , \\text{m}^3 \\]
 
-\\[ \text{Massa (m)} = \rho \cdot V = 2.700 \cdot 0,020012 \approx 54,032 , \text{kg} \\]
+\\[ \\text{Massa (m)} = \\rho \\cdot V = 2.700 \\cdot 0,020012 \\approx 54,032 , \\text{kg} \\]
 
-\\[ \text{Pes (P)} = m \cdot g = 54,032 \cdot 10 = 540,32 , \text{N} \\]
+\\[ \\text{Pes (P)} = m \\cdot g = 54,032 \\cdot 10 = 540,32 , \\text{N} \\]
             <br><br>
             `,
     },
     {
     type: "questions",
     category: "metrologia",
-    text: `En el plànol de la figura, les toleràncies per a les dimensions angulars són ±0° 30' per a $\\alpha_1$ i ±0° 20' per a $\\alpha_2$. Quina és la tolerància per a $\\beta$?  
-    <img src="https://pdieguez4.github.io/tecno/selectivitat/2015/Q12/imatgeQuestio.png" alt="Imatge relacionada amb la pregunta" width="900">` 
+    text: `En el plànol de la figura, les toleràncies per a les dimensions angulars són ±0° 30' per a $\\alpha_1$ i ±0° 20' per a $\\alpha_2$. Quina és la tolerància per a $\\beta$?`` 
+    <img src="https://pdieguez4.github.io/tecno/selectivitat/2015/Q12/imatgeQuestio.png" alt="Imatge relacionada amb la pregunta" width="350">` 
         ,
     options: [
         { text: "+0° 30' / -0° 20'", value: "a" },
@@ -339,13 +339,16 @@ relació de compressió r_c = 7,1. Quin és el volum de la cambra de combustió?
         { text: "10,47 cm³", value: "d" }
     ],
     correctAnswer: "b",
-   steps: `
-
-\\[ \\text{Total} = 25 , \\text{kg}, \\quad %Al = 6,1, \\quad %Nb = 7,3, \\quad %Altres = 0,99 \\]
-\\[ %Ti = 100 - (%Al + %Nb + %Altres) \\]
-\\[ %Ti = 100 - (6,1 + 7,3 + 0,99) = 100 - 14,39 = 85,61 % \\]
-\\[ \\text{Massa } Ti = \\text{Total} \\times \\frac{%Ti}{100} \\Rightarrow 25 \\times \\frac{85,61}{100} \\]
-\\[ \\text{Massa } Ti = 25 \\times 0,8561 = 21,4025 , \\text{kg} \\approx 21,40 , \\text{kg} \\]
+    steps: `
+\\[
+\\text{Cilindrada} = 125 \\, \\text{cm³}, \\quad r_c = 7.1
+\\]
+\\[
+\\text{Relació de compressió} \\; r_c = \\frac{V_c + V_{cc}}{V_{cc}} \\Rightarrow V_{cc} = \\frac{V_c}{r_c - 1}
+\\]
+\\[
+V_{cc} = \\frac{125}{7.1 - 1} = \\frac{125}{6.1} \\approx 20.49 \\, \\text{cm³}
+\\]
 <br><br>
     `,
 },
@@ -362,12 +365,15 @@ titani (Ti). Quina quantitat de titani (Ti) hi ha en 25 kg d’aquest aliatge?`,
         { text: "3,35 kg", value: "d" }
     ],
     correctAnswer: "c",
-    steps: `
+   steps: `
 \\[
-\\text{Percentatge de Ti} = 100\\% - (6.1\\% + 7.3\\% + 0.99\\%) = 85.61\\%
+\\text{Percentatge total conegut} = 6.1\\% + 7.3\\% + 0.99\\% = 14.39\\%
 \\]
 \\[
-\\text{Massa de Ti en 25 kg} = 0.8561 \\cdot 25 \\approx 21.65 \\, \\text{kg}
+\\text{Percentatge de Ti} = 100\\% - 14.39\\% = 85.61\\%
+\\]
+\\[
+\\text{Quantitat de Ti} = 0.8561 \\cdot 25 = 21.40\\ \\text{kg}
 \\]
 <br><br>
     `,
