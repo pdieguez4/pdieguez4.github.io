@@ -269,7 +269,6 @@ circular de 140 mm de diàmetre i 1,3 m de llargària? (Preneu g = 10 m/s².)`,
     category: "metrologia",
     text: `En el plànol de la figura, les toleràncies per a les dimensions angulars són ±0° 30' per a α1 i ±0° 20' per a α2. 
 Quina és la tolerància per a β
-<br><br>
 <img src="https://pdieguez4.github.io/tecno/selectivitat/2015/imatges/imatgeQuestio.png" alt="Imatge relacionada amb la pregunta" width="350">`
 
         ,
@@ -311,21 +310,11 @@ ple per a obtenir un benefici de 25 000 €?`,
     ],
     correctAnswer: "a",
     steps: `
-\\[
-\\text{Ingressos fixos} = 48 \\cdot 50 = 2\\,400 \\, €
-\\]
-\\[
-\\text{Ingressos variables} = 48 \\cdot 0.40 \\cdot x = 19.2 x \\, €
-\\]
-\\[
-\\text{Despeses} = 6.30 x \\, €
-\\]
-\\[
-\\text{Benefici} = Ingressos - Despeses = (2\\,400 + 19.2 x) - 6.3 x = 25\\,000
-\\]
-\\[
-12.9 x + 2\\,400 = 25\\,000 \\Rightarrow 12.9 x = 22\\,600 \\Rightarrow x \\approx 1\\,752 \\, \\text{km}
-\\]
+\\[ \\text{Ingrés fix} = 48 \\cdot 50 = 2400, \\quad \\text{Marge/km} = (48 \\cdot 0,40) - 6,30 = 12,9 \\]
+
+\\[ \\text{Benefici} = \\text{Fix} + (\\text{Marge/km} \\cdot x) \\Rightarrow x = \\frac{\\text{Benefici} - \\text{Fix}}{\\text{Marge/km}} \\]
+
+\\[ x = \\frac{25,000 - 2,400}{12,9} = \\frac{22,600}{12,9} \\approx 1,751,93 \\approx 1,752 , \\text{km} \\]
 <br><br>
     `,
 },
@@ -388,7 +377,7 @@ hsup. La bomba es posa en marxa, si està aturada, quan el nivell h del dipòsit
 i s’atura, si està en marxa, quan h és superior a hsup. Entre hinf i hsup la bomba no canvia l’estat
 de funcionament. Responeu a les qüestions que hi ha a continuació utilitzant les variables
 d’estat següents:
-               <img src="https://pdieguez4.github.io/tecno/selectivitat/2015/imatges/imatgePreguntaE1.png" alt="Imatge relacionada amb la pregunta" width="900">
+               <img src="https://pdieguez4.github.io/tecno/selectivitat/2015/imatges/imatgePreguntaE1.png" alt="Imatge relacionada amb la pregunta" width="750">
               
                <br><strong>a)</strong> Escriviu la taula de veritat del sistema i indiqueu els casos que no són possibles [1 punt]
                <br><strong>b)</strong> Determineu la funció lògica entre aquestes variables i, si escau, simplifiqueu-la.  [1 punt]
@@ -397,7 +386,7 @@ d’estat següents:
                `, 
         correctAnswer: "",  // No és necessari aquí perquè es tracta d'un exercici obert
         steps: `
-            <img src="https://pdieguez4.github.io/tecno/selectivitat/2015/imatges/imatgeRespostaE1.png" alt="Imatge relacionada amb la resposta" width="900">`,  // Imatge opcional al final de la resposta
+            <img src="https://pdieguez4.github.io/tecno/selectivitat/2015/imatges/imatgeRespostaE1.png" alt="Imatge relacionada amb la resposta" width="800">`,  // Imatge opcional al final de la resposta
     },
     {
         type: "exercicis",
@@ -499,8 +488,9 @@ cinta de nicrom de resistivitat ρ = 11,8 × 10–7 Ω m i secció rectangular 
 Determineu:
               
                <br><strong>a)</strong> El corrent I que circula per la resistència. [1 punt]
-               <br><strong>b)</strong>La longitud L de la cinta de nicrom de la resistència. [1 punt]
-               Per a garantir una bona cocció, cal que la superfície horitzontal efectiva del nicrom sigui
+               <br><strong>b)</strong> La longitud L de la cinta de nicrom de la resistència. [1 punt]
+               
+               <br> Per a garantir una bona cocció, cal que la superfície horitzontal efectiva del nicrom sigui
 un 3,5 % de la superfície total de la graella. Si la cinta està coŀlocada en la posició òptima,
 determineu:
                <br><strong>c)</strong> La superfície total S de la graella. [0,5 punts]
@@ -520,7 +510,7 @@ I = \\frac{P}{U} = 10,43 \\text{ A}
 <strong>b) Resistència \\(R\\) i longitud del conductor \\(L\\):</strong>
 <br>
 \\[
-R = \frac{U^2}{P} = \\frac{\\rho \\cdot L}{A} \implies L = \\frac{U^2 \\cdot A}{P \\cdot \\rho} = 2,802 \\text{ m}
+R = \frac{U^2}{P} = \\frac{\\rho \\cdot L}{A} \\implies L = \\frac{U^2 \\cdot A}{P \\cdot \\rho} = 2,802 \\text{ m}
 \\]
 <br>
 <strong>c) Superfície total:</strong>
@@ -535,7 +525,7 @@ S_{\\text{òptima}} = 2,802 \\cdot 1,5 \\cdot 10^{-3} \\text{ m}^2 \\implies S =
         type: "exercicis",
         category: "maquines",
         text: `
-        <img src="https://pdieguez4.github.io/tecno/selectivitat/2015/imatges/imatgePreguntaE5.png" alt="Imatge relacionada amb la pregunta" width="900">
+        <img src="https://pdieguez4.github.io/tecno/selectivitat/2015/imatges/imatgePreguntaE5.png" alt="Imatge relacionada amb la pregunta" width="800">
         LLa barra AB de la qual penja la cistella de bàsquet de la figura s’articula al sostre en el punt
 A i es manté vertical mitjançant la barra BC articulada en el punt B. En el punt C del sostre, la
 barra BC es manté fixa per l’acció d’un cable horitzontal, que no es mostra en la figura. Totes
@@ -543,7 +533,7 @@ les masses es consideren negligibles excepte la massa del tauler, que és m = 35
               
                <br><strong>a)</strong> Dibuixeu el diagrama de cos lliure del conjunt format per la barra AB i el tauler.
 [0,5 punts]
-               <br><strong>Determineu:)</strong>
+               <br><strong>Determineu:</strong>
                <br><strong>b)</strong> La força FBC que la barra BC fa sobre la barra AB. [0,5 punts]
                <br><strong>c)</strong> Les forces vertical FV i horitzontal FH que la cistella rep en el punt A. [1 punt]
                <br><strong>d)</strong>  La força horitzontal Fcable que fa el cable sobre la barra BC. [0,5 punts]
@@ -552,7 +542,7 @@ les masses es consideren negligibles excepte la massa del tauler, que és m = 35
         correctAnswer: "",  // No és necessari aquí perquè es tracta d'un exercici obert
         steps: `
             
-            <img src="https://pdieguez4.github.io/tecno/selectivitat/2015/imatges/imatgeRespostaE5.png" alt="Imatge relacionada amb la resposta" width="900">
+            <img src="https://pdieguez4.github.io/tecno/selectivitat/2015/imatges/imatgeRespostaE5.png" alt="Imatge relacionada amb la resposta" width="850">
             `
     },
    {
@@ -561,7 +551,7 @@ les masses es consideren negligibles excepte la massa del tauler, que és m = 35
         text: `Es tiren simultàniament tres daus i se sumen els valors obtinguts. El resultat pot ser parell
 o senar en funció de si el valor de cadascun dels daus és, també, parell o senar. Es defineix la
 funció lògica de la paritat del resultat utilitzant les variables d’estat següents:
-               <img src="https://pdieguez4.github.io/tecno/selectivitat/2015/imatges/imatgePreguntaE6.png" alt="Imatge relacionada amb la pregunta" width="900">
+               <img src="https://pdieguez4.github.io/tecno/selectivitat/2015/imatges/imatgePreguntaE6.png" alt="Imatge relacionada amb la pregunta" width="750">
               
                <br><strong>a)</strong> Escriviu la taula de veritat del sistema. [1 punt]
                <br><strong>b)</strong> Determineu la funció lògica entre aquestes variables i, si escau, simplifiqueu-la. [1 punt]
@@ -570,7 +560,7 @@ funció lògica de la paritat del resultat utilitzant les variables d’estat se
                `, 
         correctAnswer: "",  // No és necessari aquí perquè es tracta d'un exercici obert
         steps: `
-            <img src="https://pdieguez4.github.io/tecno/selectivitat/2015/imatges/imatgeRespostaE6.png" alt="Imatge relacionada amb la resposta" width="900">`,  // Imatge opcional al final de la resposta
+            <img src="https://pdieguez4.github.io/tecno/selectivitat/2015/imatges/imatgeRespostaE6.png" alt="Imatge relacionada amb la resposta" width="750">`,  // Imatge opcional al final de la resposta
     },
      {
         type: "exercicis",
@@ -583,7 +573,8 @@ calorífic pc = 41,7 MJ/L. El radi de les rodes és r = 400 mm.
               
                <br><strong>a)</strong> Dibuixeu, d’una manera aproximada i indicant les escales, la massa total en funció del
 percentatge de càrrega de combustible disponible en el dipòsit. [1 punt]
-               Amb la primera marxa, la relació de transmissió entre la velocitat de rotació del motor
+
+<br>Amb la primera marxa, la relació de transmissió entre la velocitat de rotació del motor
 nmot i la velocitat de rotació de les rodes nr
  és τ = nr
 /nmot = 0,285. El rendiment de la transmissió
@@ -595,7 +586,7 @@ nmot i la velocitat de rotació de les rodes nr
                `, 
         correctAnswer: "",  // No és necessari aquí perquè es tracta d'un exercici obert
         steps: `
-            <img src="https://pdieguez4.github.io/tecno/selectivitat/2015/imatges/imatgeRespostaE7.png" alt="Imatge relacionada amb la resposta" width="900">`,  // Imatge opcional al final de la resposta
+            <img src="https://pdieguez4.github.io/tecno/selectivitat/2015/imatges/imatgeRespostaE7.png" alt="Imatge relacionada amb la resposta" width="750">`,  // Imatge opcional al final de la resposta
     },
    {
         type: "exercicis",
@@ -725,7 +716,7 @@ on r1
  s’anomenen residus i poden ser iguals a 0, 1 o 2. La suma dels dos nombres
 s = z1 + z2
  pot ser múltiple de 3 o no. Responeu a les qüestions que hi ha a continuació utilitzant les variables d’estat següents:
-               <img src="https://pdieguez4.github.io/tecno/selectivitat/2015/imatges/imatgePreguntaE11.png" alt="Imatge relacionada amb la pregunta" width="900">
+               <img src="https://pdieguez4.github.io/tecno/selectivitat/2015/imatges/imatgePreguntaE11.png" alt="Imatge relacionada amb la pregunta" width="800">
               
                <br><strong>a)</strong> Escriviu la taula de veritat del sistema i indiqueu els casos que no són possibles. [1 punt]
                <br><strong>b)</strong> Determineu la funció lògica entre aquestes variables i, si escau, simplifiqueu-la.  [1 punt]
@@ -734,7 +725,7 @@ s = z1 + z2
                `, 
         correctAnswer: "",  // No és necessari aquí perquè es tracta d'un exercici obert
         steps: `
-            <img src="https://pdieguez4.github.io/tecno/selectivitat/2015/imatges/imatgeRespostaE11.png" alt="Imatge relacionada amb la resposta" width="900">`,  // Imatge opcional al final de la resposta
+            <img src="https://pdieguez4.github.io/tecno/selectivitat/2015/imatges/imatgeRespostaE11.png" alt="Imatge relacionada amb la resposta" width="800">`,  // Imatge opcional al final de la resposta
     },
      {
         type: "exercicis", 
@@ -805,12 +796,12 @@ les escales. [1 punt]
                `, 
         correctAnswer: "",  // No és necessari aquí perquè es tracta d'un exercici obert
        steps: `
-            <img src="https://pdieguez4.github.io/tecno/selectivitat/2015/imatges/imatgeRespostaE13.png" alt="Imatge relacionada amb la resposta" width="900">`,  // Imatge opcional al final de la resposta
+            <img src="https://pdieguez4.github.io/tecno/selectivitat/2015/imatges/imatgeRespostaE13.png" alt="Imatge relacionada amb la resposta" width="850">`,  // Imatge opcional al final de la resposta
     },
      {
         type: "exercicis",
         category: "control",
-        text: `<img src="https://pdieguez4.github.io/tecno/selectivitat/2015/imatges/imatgePreguntaE11.png" alt="Imatge relacionada amb la pregunta" width="900">La placa d’acer de la figura, de gruix e = 5 mm, està articulada en el punt O i es manté en
+        text: `<img src="https://pdieguez4.github.io/tecno/selectivitat/2015/imatges/imatgePreguntaE11.png" alt="Imatge relacionada amb la pregunta" width="800">La placa d’acer de la figura, de gruix e = 5 mm, està articulada en el punt O i es manté en
 repòs mitjançant el cable PQ de secció nominal s = 2,7 mm2.
 
               
@@ -826,7 +817,7 @@ repòs mitjançant el cable PQ de secció nominal s = 2,7 mm2.
                `, 
         correctAnswer: "",  // No és necessari aquí perquè es tracta d'un exercici obert
         steps: `
-            <img src="https://pdieguez4.github.io/tecno/selectivitat/2015/imatges/imatgeRespostaE11.png" alt="Imatge relacionada amb la resposta" width="900">`,  // Imatge opcional al final de la resposta
+            <img src="https://pdieguez4.github.io/tecno/selectivitat/2015/imatges/imatgeRespostaE11.png" alt="Imatge relacionada amb la resposta" width="800">`,  // Imatge opcional al final de la resposta
     },
     {
         type: "exercicis",
