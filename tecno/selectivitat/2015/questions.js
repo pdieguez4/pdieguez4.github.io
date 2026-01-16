@@ -268,7 +268,8 @@ circular de 140 mm de diàmetre i 1,3 m de llargària? (Preneu g = 10 m/s².)`,
     type: "questions", // Tipus de pregunta
     category: "metrologia",
     text: `En el plànol de la figura, les toleràncies per a les dimensions angulars són ±0° 30’ per a α₁
-i ±0° 20’ per a α₂. Quina és la tolerància per a β?`,
+i ±0° 20’ per a α₂. Quina és la tolerància per a β?
+<img src="https://pdieguez4.github.io/tecno/selectivitat/2015/imatges/imatgeRespostaE1.png" alt="Imatge relacionada amb la resposta" width="800">`,
     options: [
         { text: "(+0° 30’ / −0° 20’)", value: "a" },
         { text: "±0° 50’", value: "b" },
@@ -347,7 +348,7 @@ titani (Ti). Quina quantitat de titani (Ti) hi ha en 25 kg d’aquest aliatge?`,
         { text: "21,65 kg", value: "c" },
         { text: "3,35 kg", value: "d" }
     ],
-    correctAnswer: "c",
+    correctAnswer: "a",
    steps: `
 \\[
 \\text{Percentatge total conegut} = 6.1\\% + 7.3\\% + 0.99\\% = 14.39\\%
