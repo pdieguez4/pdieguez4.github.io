@@ -267,10 +267,10 @@ circular de 140 mm de diàmetre i 1,3 m de llargària? (Preneu g = 10 m/s².)`,
     {
     type: "questions",
     category: "metrologia",
-    text: `En el plànol de la figura, les toleràncies per a les dimensions angulars són ±0° 30' per a $\\alpha_1$ i ±0° 20' per a $\\alpha_2$. 
-Quina és la tolerància per a $\\beta$?
+    text: `En el plànol de la figura, les toleràncies per a les dimensions angulars són ±0° 30' per a α1 i ±0° 20' per a α2. 
+Quina és la tolerància per a β
 <br><br>
-<img src="https://pdieguez4.github.io/tecno/selectivitat/2015/Q12/imatgeQuestio.png" alt="Imatge relacionada amb la pregunta" width="350">`
+<img src="https://pdieguez4.github.io/tecno/selectivitat/2015/imatges/imatgeQuestio.png" alt="Imatge relacionada amb la pregunta" width="350">`
 
         ,
     options: [
@@ -382,94 +382,70 @@ titani (Ti). Quina quantitat de titani (Ti) hi ha en 25 kg d’aquest aliatge?`,
 },  
 {
         type: "exercicis",
-        category: "energia",
-        text: `Per a controlar la velocitat dels vehicles a l'entrada d'una població s'ha instaŀlat un semàfor que generalment és verd, però que canvia a vermell quan es detecta un vehicle que s'hi
-        apropa a una velocitat superior o igual a \\(60 \\; \\text{km/h}\\). Perquè els vianants puguin travessar la
-        carretera, el semàfor dels cotxes també canvia a vermell si com a mínim fa un minut que és
-        verd i, a més, un vianant prem el polsador que incorpora el mateix semàfor. Responeu a les
-        qüestions que hi ha a continuació utilitzant les variables d'estat següents:
-               <img src="https://pdieguez4.github.io/tecno/selectivitat/2015/Ex1/imatgePregunta.png" alt="Imatge relacionada amb la pregunta" width="900">
+        category: "control",
+        text: `Una bomba de cabal es fa servir per a mantenir el nivell d’aigua d’un dipòsit entre hinf i
+hsup. La bomba es posa en marxa, si està aturada, quan el nivell h del dipòsit és inferior a hinf,
+i s’atura, si està en marxa, quan h és superior a hsup. Entre hinf i hsup la bomba no canvia l’estat
+de funcionament. Responeu a les qüestions que hi ha a continuació utilitzant les variables
+d’estat següents:
+               <img src="https://pdieguez4.github.io/tecno/selectivitat/2015/imatges/imatgePreguntaE1.png" alt="Imatge relacionada amb la pregunta" width="900">
               
-               <br><strong>a)</strong> Elaboreu la taula de veritat del sistema. [1 punt]
-               <br><strong>b)</strong> Determineu la funció lògica entre aquestes variables i, si escau, simplifiqueu-la. [1 punt]
-               <br><strong>c)</strong> Dibuixeu l’esquema de portes lògiques equivalent. [0,5 punts]
+               <br><strong>a)</strong> Escriviu la taula de veritat del sistema i indiqueu els casos que no són possibles [1 punt]
+               <br><strong>b)</strong> Determineu la funció lògica entre aquestes variables i, si escau, simplifiqueu-la.  [1 punt]
+               <br><strong>c)</strong> Dibuixeu l’esquema de contactes equivalent. [0,5 punts]
                <br><br>
                `, 
         correctAnswer: "",  // No és necessari aquí perquè es tracta d'un exercici obert
         steps: `
-            <img src="https://pdieguez4.github.io/tecno/selectivitat/2015/Ex1/imatgeResposta.png" alt="Imatge relacionada amb la resposta" width="900">`,  // Imatge opcional al final de la resposta
+            <img src="https://pdieguez4.github.io/tecno/selectivitat/2015/imatges/imatgeRespostaE1.png" alt="Imatge relacionada amb la resposta" width="900">`,  // Imatge opcional al final de la resposta
     },
     {
         type: "exercicis",
         category: "materials",
         text: `
-        <img src="https://pdieguez4.github.io/tecno/selectivitat/2015/Ex2/imatgePregunta.png" alt="Imatge relacionada amb la pregunta" width="900">
+        <img src="https://pdieguez4.github.io/tecno/selectivitat/2015/imatges/imatgePreguntaE2.png" alt="Imatge relacionada amb la pregunta" width="900">
 
-        Es vol construir una estrella de sis puntes com la de la figura a partir d'un tauler de fusta.
-L'estrella es pot construir a partir de triangles equilàters o de rombes com els que es mostren
-en la figura. El cost de producció de l'estrella es calcula segons l'expressió 
-\\[
-c = c_{1} s + c_{2} p
-\\]
-en què s és la superfície de fusta utilitzada i p és el perímetre de les peces tallades per a construir
-l'estrella. El primer coeficient de cost és \\(c_{1} = 15 \\; \\text{€/m}^2\\)
-, i el segon és \\(c_{2} = 0,6 \\; \\text{€/m}\\)  si el perfil és
-senzill (com, per exemple, un triangle o un rombe) o \\(c_{2} = 1,4 \\; \\text{€/m} \\) si el perfil és complex (com,
-per exemple, una estrella). Determineu:
+       Un trepant elèctric funciona mitjançant un motor de rendiment ηmot = 0,76 i una transmissió per corretja dentada que té un rendiment ηtransm = 0,94 i una relació de transmissió
+τ = n2
+/n1 = 5/7, tal com mostra la figura. En règim de funcionament nominal, el motor consumeix una potència elèctrica Pelèctr = 1 100W i l’eix del motor gira a n1 = 1 460 min–1. Determineu:
               
-               <br><strong>a)</strong> El nombre de triangles equilàters \\(n_{T}\\) que calen per a construir l'estrella i el perímetre
-                                        de les peces tallades \\(p_{T}\\) en aquest cas. [0,5 punts]
-               <br><strong>b)</strong> El nombre de rombes \\(n_{R}\\) que calen per a construir l'estrella i el perímetre de les peces
-                                        tallades \\(p_{R}\\) en aquest cas. [0,5 punts]
-               <br><strong>c)</strong> El perímetre tallat \\(p_{E}\\) si l'estrella es construeix tallant-ne directament el perfil exterior. [0,5 punts]
-               <br><strong>d)</strong> La superfície \\(s\\) de fusta necessària per a construir l’estrella, i el cost \\(c_{T}\\), \\(c_{R}\\) i \\(c_{E}\\)
- de cadascuna de les tres opcions anteriors. Quina és l'opció més econòmica?
+               <br><strong>a)</strong> La potència P1
+ a l’eix del motor. [0,5 punts]
+               <br><strong>b)</strong>  El parell Γ2
+ a l’eix de la broca (eix de sortida del trepant). [0,5 punts]
+               <br><strong>c)</strong> La potència total dissipada Pdiss en el trepant [0,5 punts]
+               <br><strong>d)</strong> El diàmetre d2
+ de la politja solidària a l’eix de la broca
                <br><br>
                `, 
         correctAnswer: "",  // No és necessari aquí perquè es tracta d'un exercici obert
         steps: `
-            <strong>a) Nombre de triangles equilàters \\(n_{\text{T}}\\) i el perímetre \\(p_{\text{T}}\\):</strong>
-            <br>
-            \\[
-            n_{\\text{T}} = 6 + 6 = 12 \\, \\text{triangles}
-            \\]
-            \\[
-            p_{\\text{T}} = n_{\\text{T}} \\cdot 3b = 12 \\cdot 3 \\cdot 0{,}3 = 10{,}8 \\, \\text{m}
-            \\]
-            <br>
-            <strong>b) Nombre de rombes \\(n_{\\text{R}}\\) i perímetre de les peces \\(p_{\\text{R}}\\):</strong>
-            <br>
-            \\[
-            n_{\\text{R}} = \\frac{n_{\\text{T}}}{2} = \\frac{12}{2} = 6 \\, \\text{rombes}
-            \\]
-            \\[
-            p_{\\text{R}} = n_{\\text{R}} \\cdot 4b = 6 \\cdot 4 \\cdot 0{,}3 = 7{,}2 \\, \\text{m}
-            \\]
-            <br>
-            <strong>c) Perímetre tallat \\(p_{\\text{E}}\\) de l'estrella (perfil exterior):</strong>
-            <br>
-            \\[
-            p_{\\text{E}} = 12 \\cdot b = 12 \\cdot 0{,}3 = 3{,}6 \\, \\text{m}
-            \\]
-            <br>
-            <strong>d) Superfície \\(s\\), costos \\(c_{\text{T}}, c_{\text{R}}, c_{\text{E}}\\) i opció més econòmica:</strong>
-            <br>
-            - Superfície d'un triangle equilàter: \\( A_{\\text{T}} = \\frac{\\sqrt{3}}{4} b^2 = \\frac{\\sqrt{3}}{4} (0{,}3)^2 = 0{,}03897 \\, \\text{m}^2 \\).
-            \\[
-            s = 12 \\cdot A_{\\text{T}} = 12 \\cdot 0{,}03897 = 0{,}4677 \\, \\text{m}^2
-            \\]
-            \\[
-            c_{\\text{T}} = (15 \\cdot 0{,}4677) + (0{,}6 \\cdot 10{,}8) = 7{,}016 + 6{,}48 = 13{,}50 \\, \\text{€}
-            \\]
-            - Cost amb rombes (\\( c_2 = 0{,}6 \\)): 
-            \\[
-            c_{\\text{R}} = (15 \\cdot 0{,}4677) + (0{,}6 \\cdot 7{,}2) = 7{,}016 + 4{,}32 = 11{,}34 \\, \\text{€}
-            \\]
-            - Cost estrella sencera (\\( c_2 = 1{,}4 \\)): 
-            \\[
-            c_{\\text{E}} = (15 \\cdot 0{,}4677) + (1{,}4 \\cdot 3{,}6) = 7{,}016 + 5{,}04 = 12{,}06 \\, \\text{€}
-            \\]
-            - <strong>Conclusió:</strong> L'opció més econòmica és la construcció a partir de <strong>6 rombes</strong> amb un cost d'<strong>11,34 €</strong>.
+           <strong>a) Potència útil del motor \\(P_1\\):</strong>
+<br>
+\\[
+P_1 = P_{\\text{elèctr}} \\cdot \\eta_{\\text{mot}} = 1100 \\cdot 0{,}76 = 836 \\, \\text{W}
+\\]
+<br>
+<strong>b) Parell motor a la sortida de la transmissió \\(\Gamma_2\\):</strong>
+<br>
+\\[
+P_2 = P_1 \\cdot \\eta_{\\text{transm}} \\quad ; \\quad n_2 = \\tau \\cdot n_1
+\\]
+\\[
+\\Gamma_2 = \\frac{P_2}{n_2 \\frac{2\\pi}{60}} = \\frac{P_1 \\cdot \\eta_{\\text{transm}}}{\\tau \\cdot n_1 \\frac{2\\pi}{60}} = 7{,}196 \\, \\text{Nm}
+\\]
+<br>
+<strong>c) Potència dissipada per calor \\(P_{\\text{diss}}\\):</strong>
+<br>
+\\[
+P_{\\text{diss}} = P_{\\text{elèctr}} - P_2 = P_{\\text{elèctr}} (1 - \\eta_{\\text{mot}} \\cdot \\eta_{\\text{transm}}) = 314{,}2 \\, \\text{W}
+\\]
+<br>
+<strong>d) Diàmetre de la politja de sortida \\(d_2\\):</strong>
+<br>
+\\[
+\\tau = \\frac{n_2}{n_1} = \\frac{d_1}{d_2} \\implies d_2 = \\frac{d_1}{\\tau} = 112 \\, \\text{mm}
+\\]
             <br><br>
             `
     },
