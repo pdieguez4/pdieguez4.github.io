@@ -267,8 +267,11 @@ circular de 140 mm de diàmetre i 1,3 m de llargària? (Preneu g = 10 m/s².)`,
     {
     type: "questions",
     category: "metrologia",
-    text: `En el plànol de la figura, les toleràncies per a les dimensions angulars són ±0° 30' per a $\\alpha_1$ i ±0° 20' per a $\\alpha_2$. Quina és la tolerància per a $\\beta$?`` 
-    <img src="https://pdieguez4.github.io/tecno/selectivitat/2015/Q12/imatgeQuestio.png" alt="Imatge relacionada amb la pregunta" width="350">` 
+    text: `En el plànol de la figura, les toleràncies per a les dimensions angulars són ±0° 30' per a $\\alpha_1$ i ±0° 20' per a $\\alpha_2$. 
+Quina és la tolerància per a $\\beta$?
+<br><br>
+<img src="https://pdieguez4.github.io/tecno/selectivitat/2015/Q12/imatgeQuestio.png" alt="Imatge relacionada amb la pregunta" width="350">`
+
         ,
     options: [
         { text: "+0° 30' / -0° 20'", value: "a" },
