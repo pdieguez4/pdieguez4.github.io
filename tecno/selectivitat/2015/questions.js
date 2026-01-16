@@ -401,7 +401,7 @@ d’estat següents:
     },
     {
         type: "exercicis",
-        category: "materials",
+        category: "motors",
         text: `
         <img src="https://pdieguez4.github.io/tecno/selectivitat/2015/imatges/imatgePreguntaE2.png" alt="Imatge relacionada amb la pregunta" width="900">
 
@@ -451,150 +451,422 @@ P_{\\text{diss}} = P_{\\text{elèctr}} - P_2 = P_{\\text{elèctr}} (1 - \\eta_{\
     },
     {
         type: "exercicis",
-        category: "motors",
+        category: "energia",
         text: `
-        Un elevador puja amb una velocitat constant una càrrega \\(m = 2 500 \\; \\text{kg}\\) fins a una altura
-\\(Δh = 5 \\; \\text{m} \\) en un temps \\(t = 60 \\; \\text{s} \\). L'elevador s'acciona amb un motor elèctric de corrent continu en sèrie amb un reductor d'engranatges. Segons el catàleg del fabricant, el rendiment del
-reductor d'engranatges és \\(η_{red} = 0,70\\). El motor s'alimenta amb una tensió \\( U = 220 \\; \\text{V} \\), gira a
-una velocitat \\(n = 1 500 \\; \\text{min}^{–1}\\) i té un rendiment electromecànic \\(η_{mot} = 0,78\\). Si les resistències
-passives a l'elevador es consideren negligibles, determineu:
+        En una instaŀlació, una bomba accionada per un motor tèrmic fa pujar un volum
+V= 600 m3
+ d’aigua fins a una altura h = 3,6 m, en un temps t = 10 h de funcionament estacionari. Determineu:
               
-               <br><strong>a)</strong> La potència mecànica \\(P_{càrrega}\\) requerida per a elevar la càrrega. [0,5 punts]
-               <br><strong>b)</strong> La potència \\(P_{m}\\) i el parell \\(Γ_{m}\\) a l'eix de sortida del motor. [1 punt]
-               <br><strong>c)</strong> La intensitat \\(I\\) que consumeix el motor elèctric. [0,5 punts]
-               <br><strong>d)</strong> La potència total dissipada \\(P_{diss}\\) pel conjunt motor-reductor. [0,5 punts]
+               <br><strong>a)</strong> El treball W fet per la bomba. [1 punt]
+               <br><strong>b)</strong> La potència hidràulica Ph
+ que desenvolupa la bomba. [0,5 punts]
+               <br><strong>c)</strong>  El rendiment η del grup motobomba, si el motor ha consumit c = 3 L d’un combustible
+de densitat ρ = 850 kg/m3
+ i de poder calorífic pc = 42,5 MJ/kg. [1 punt]
+               
                <br><br>
                `, 
         correctAnswer: "",  // No és necessari aquí perquè es tracta d'un exercici obert
         steps: `
-            <strong>a) Potència mecànica requerida per elevar la càrrega \\(P_{càrrega}\\):</strong>
-            <br>
-            \\[
-            v = \\frac{\\Delta h}{t} = \\frac{5}{60} = 0,0833 \\; \\text{m/s}
-            \\]
-            \\[
-            F = m \\cdot g = 2500 \\cdot 9{,}81 = 24525 \\; \\text{N}
-            \\]
-            \\[
-            P_{càrrega} = F \\cdot v = 24525 \\cdot 0,0833 = 2044 \\; \\text{W}
-            \\]
-            <br>
-            <strong>b) Potència \\(P_{m}\\) i el parell \\(Γ_{m}\\) a l'eix del motor:</strong>
-            <br>
-            \\[
-            P_{m} = \\frac{P_{càrrega}}{η_{red}} = \\frac{2044}{0,70} = 2919 \\; \\text{W}
-            \\]
-            \\[
-            \\omega = \\frac{2\\pi n}{t} = \\frac{2\\pi 1500}{60} = 157,1 \\; \\text{rad/s}
-            \\]
-            \\[
-            Γ_{m} = \\frac{P_m}{\\omega} = \\frac{2919}{157,1} = 18,6 \\; \\text{N\\(\\cdot\\)m}
-            \\]
-            <br>
-            <strong>c) Intensitat consumida pel motor:</strong>
-            <br>
-            \\[
-            P_{el} = \\frac{P_m}{η_{mot}} = \\frac{2919}{0,78} = 3742,3 \\; \\text{W}
-            \\]
-            \\[
-            I = \\frac{P_{el}}{U} = \\frac{3742,3}{220} = 17,01 \\; \\text{A}
-            \\]
-            <br>
-            <strong>d) Potència total dissipada pel conjunt motor–reductor:</strong>
-            <br>
-            \\[
-            P_{diss} = P_{el} - P_{càrrega} = 3742,3 - 2044 = 1698,3 \\; \\text{W}
-            \\]
+            <strong>a) Treball realitzat \\(W\\) (Energia potencial):</strong>
+<br>
+\\[
+W = E_{\\text{p}} = mgh = V \\rho g h = 600 \\cdot 1000 \\cdot 9{,}807 \\cdot 3{,}6 = 21{,}18 \\, \\text{MJ}
+\\]
+<br>
+<strong>b) Potència hídrica \\(P_{\\text{h}}\\):</strong>
+<br>
+\\[
+P_{\\text{h}} = \\frac{W}{t} = 588{,}4 \\, \\text{W}
+\\]
+<br>
+<strong>c) Rendiment del sistema \\(\\eta\\):</strong>
+<br>
+\\[
+\\eta = \\frac{W}{c \\cdot \\rho \\cdot p_{\\text{c}}} = 0{,}1955
+\\]
             <br><br>
             `
     },
     {
         type: "exercicis",
-        category: "maquines",
+        category: "energia",
         text: `
-        <img src="https://pdieguez4.github.io/tecno/selectivitat/2015/Ex4/imatgePregunta.png" alt="Imatge relacionada amb la pregunta" width="900">
-        La placa d’alumini de la figura, de gruix
-\\(e = 5 \\; \\text{mm}\\), està articulada a terra en el punt
-O. Per a mantenir-la en repòs s’utilitza un
-cable d’acer que es fixa en el punt A i que té la
-direcció que es mostra en la figura. El cable té
-una secció circular de diàmetre \\(d = 2 \\; \\text{mm}\\). La
-densitat de l’alumini és \\(ρ_{alumini} = 2 710 kg/m^{3}\\) i el mòdul elàstic de l'acer és \\(E_{acer} = 207 \\; \\text{GPa}\\).
+        En coure carn durant 15 min en una graella elèctrica alimentada amb una tensió U = 230 V,
+es consumeixen 0,6 kW h d’energia elèctrica. La resistència de la graella està formada per una
+cinta de nicrom de resistivitat ρ = 11,8 × 10–7 Ω m i secció rectangular A = (0,1 × 1,5) mm2
+.
+Determineu:
               
-               <br><strong>a)</strong> Dibuixeu el diagrama de cos lliure de la placa. [0,5 punts]
-               <br><strong>Determineu:)</strong>
-               <br><strong>b)</strong> La massa \\(m\\) de la placa. [0,5 punts]
-               <br><strong>c)</strong> La força \\(T\\) que fa el cable, i les forces horitzontal \\(F_{h}\\) i vertical \\(F_{v}\\) en el punt O. [1 punt]
-               <br><strong>d)</strong>  La tensió normal \\(σ\\) del cable i el seu allargament unitari \\(ε\\). Si el límit elàstic de l’acer
-és \\(σ_{e,acer} = 350 \\; \\text{MPa}\\), el cable s’arriba a deformar de manera permanent? [0,5 punts]
+               <br><strong>a)</strong> El corrent I que circula per la resistència. [1 punt]
+               <br><strong>b)</strong>La longitud L de la cinta de nicrom de la resistència. [1 punt]
+               Per a garantir una bona cocció, cal que la superfície horitzontal efectiva del nicrom sigui
+un 3,5 % de la superfície total de la graella. Si la cinta està coŀlocada en la posició òptima,
+determineu:
+               <br><strong>c)</strong> La superfície total S de la graella. [0,5 punts]
                <br><br>
                `, 
         correctAnswer: "",  // No és necessari aquí perquè es tracta d'un exercici obert
         steps: `
-            <strong>a) Diagrama del cos lliure:</strong>
-            <img src="https://pdieguez4.github.io/tecno/selectivitat/2015/Ex4/imatgeResposta.png" alt="Imatge relacionada amb la resposta" width="900">
+            <strong>a) Potència \\(P\\) i intensitat \\(I\\):</strong>
+<br>
+\\[
+E = P \\cdot t \\implies P = \\frac{E}{t} = 2400 \\text{ W}
+\\]
+\\[
+I = \\frac{P}{U} = 10,43 \\text{ A}
+\\]
+<br>
+<strong>b) Resistència \\(R\\) i longitud del conductor \\(L\\):</strong>
+<br>
+\\[
+R = \frac{U^2}{P} = \\frac{\\rho \\cdot L}{A} \implies L = \\frac{U^2 \\cdot A}{P \\cdot \\rho} = 2,802 \\text{ m}
+\\]
+<br>
+<strong>c) Superfície total:</strong>
+<br>
+\\[
+S_{\\text{òptima}} = 2,802 \\cdot 1,5 \\cdot 10^{-3} \\text{ m}^2 \\implies S = \\frac{100}{3,5} S_{\\text{òptima}} = 0,12 \\text{ m}^2
+\\]
+            <br><br>
+            `
+    },
+     {
+        type: "exercicis",
+        category: "maquines",
+        text: `
+        <img src="https://pdieguez4.github.io/tecno/selectivitat/2015/imatges/imatgePreguntaE5.png" alt="Imatge relacionada amb la pregunta" width="900">
+        LLa barra AB de la qual penja la cistella de bàsquet de la figura s’articula al sostre en el punt
+A i es manté vertical mitjançant la barra BC articulada en el punt B. En el punt C del sostre, la
+barra BC es manté fixa per l’acció d’un cable horitzontal, que no es mostra en la figura. Totes
+les masses es consideren negligibles excepte la massa del tauler, que és m = 35 kg.
+              
+               <br><strong>a)</strong> Dibuixeu el diagrama de cos lliure del conjunt format per la barra AB i el tauler.
+[0,5 punts]
+               <br><strong>Determineu:)</strong>
+               <br><strong>b)</strong> La força FBC que la barra BC fa sobre la barra AB. [0,5 punts]
+               <br><strong>c)</strong> Les forces vertical FV i horitzontal FH que la cistella rep en el punt A. [1 punt]
+               <br><strong>d)</strong>  La força horitzontal Fcable que fa el cable sobre la barra BC. [0,5 punts]
+               <br><br>
+               `, 
+        correctAnswer: "",  // No és necessari aquí perquè es tracta d'un exercici obert
+        steps: `
+            
+            <img src="https://pdieguez4.github.io/tecno/selectivitat/2015/imatges/imatgeRespostaE5.png" alt="Imatge relacionada amb la resposta" width="900">
+            `
+    },
+   {
+        type: "exercicis",
+        category: "control",
+        text: `Es tiren simultàniament tres daus i se sumen els valors obtinguts. El resultat pot ser parell
+o senar en funció de si el valor de cadascun dels daus és, també, parell o senar. Es defineix la
+funció lògica de la paritat del resultat utilitzant les variables d’estat següents:
+               <img src="https://pdieguez4.github.io/tecno/selectivitat/2015/imatges/imatgePreguntaE6.png" alt="Imatge relacionada amb la pregunta" width="900">
+              
+               <br><strong>a)</strong> Escriviu la taula de veritat del sistema. [1 punt]
+               <br><strong>b)</strong> Determineu la funció lògica entre aquestes variables i, si escau, simplifiqueu-la. [1 punt]
+               <br><strong>c)</strong> Dibuixeu l’esquema de portes lògiques equivalent. [0,5 punts]
+               <br><br>
+               `, 
+        correctAnswer: "",  // No és necessari aquí perquè es tracta d'un exercici obert
+        steps: `
+            <img src="https://pdieguez4.github.io/tecno/selectivitat/2015/imatges/imatgeRespostaE6.png" alt="Imatge relacionada amb la resposta" width="900">`,  // Imatge opcional al final de la resposta
+    },
+     {
+        type: "exercicis",
+        category: "motors",
+        text: `
+        Un dels cotxes participants en el Raŀli Dakar té un dipòsit de combustible amb una
+capacitat V= 400 L. La massa del vehicle amb el dipòsit buit més la dels ocupants és de
+m = 2 050 kg. El combustible que utilitza el cotxe és gasoil de densitat ρ = 0,832 kg/L i poder
+calorífic pc = 41,7 MJ/L. El radi de les rodes és r = 400 mm.
+              
+               <br><strong>a)</strong> Dibuixeu, d’una manera aproximada i indicant les escales, la massa total en funció del
+percentatge de càrrega de combustible disponible en el dipòsit. [1 punt]
+               Amb la primera marxa, la relació de transmissió entre la velocitat de rotació del motor
+nmot i la velocitat de rotació de les rodes nr
+ és τ = nr
+/nmot = 0,285. El rendiment de la transmissió
+és ηtrans = 0,85 i el motor proporciona un parell màxim Γ = 750 N m. Determineu:
+               <br><strong>b)</strong> El parell total màxim Γr
+ a l’eix de les rodes. [0,5 punts]
+               <br><strong>c)</strong> L’acceleració màxima del cotxe amb el dipòsit ple i amb el dipòsit al 5 % de la capacitat total. [1 punt]
+               <br><br>
+               `, 
+        correctAnswer: "",  // No és necessari aquí perquè es tracta d'un exercici obert
+        steps: `
+            <img src="https://pdieguez4.github.io/tecno/selectivitat/2015/imatges/imatgeRespostaE7.png" alt="Imatge relacionada amb la resposta" width="900">`,  // Imatge opcional al final de la resposta
+    },
+   {
+        type: "exercicis",
+        category: "energia",
+        text: `
+        Per a abastir d’aigua potable una població, es construeix una estació de bombament. 
+        Aquesta estació ha de bombar un volum diari V = 2 540 m3 elevant-lo a una altura h = 129 m. Les pèrdues de tota la instaŀlació són equivalents a una elevació addicional Δh = 70,81 m. L’estació de bombament consta de sis bombes accionades mitjançant un motor elèctric. El rendiment de les bombes és η = 0,7 i, per a reduir el cost de la despesa elèctrica, es bomba únicament durant un temps t = 8 h al dia en què el cost de l’energia elèctrica és el més reduït, i correspon a c = 0,08241 €/(kWh). Determineu:
+        
+        <br><strong>a)</strong> El treball W que ha de desenvolupar l’estació de bombament. [1 punt]
+        <br><strong>b)</strong> La potència elèctrica Pelèctr consumida per cada bomba i el cost total del consum elèctric en un dia. [1 punt]
+        <br><strong>c)</strong> La pressió mitjana p de funcionament de les bombes. [0,5 punts]
+        
+        <br><br>
+        `, 
+        correctAnswer: "",  
+        steps: `
+            <strong>a) Treball desenvolupat per l'estació \\(W\\):</strong>
+<br>
+\\[
+W = E_{\\text{p}} = mg(h + \\Delta h) = V \\rho g (h + \\Delta h) = 2540 \\cdot 1000 \\cdot 9{,}807 \\cdot (129 + 70{,}81) = 4977 \\, \\text{MJ}
+\\]
+<br>
+<strong>b) Potència elèctrica per bomba \\(P_{\\text{elèctr}}\\) i cost total:</strong>
+<br>
+\\[
+\\eta = \\frac{W}{6 \\cdot P_{\\text{elèctr}} \\cdot t} \\Rightarrow P_{\\text{elèctr}} = \\frac{W}{6 \\cdot \\eta \\cdot t} = \\frac{4977 \\cdot 10^6}{6 \\cdot 0{,}7 \\cdot 8 \\cdot 3600} = 41{,}15 \\, \\text{kW}
+\\]
+\\[
+E_{\\text{elèctr}} = 6 \\cdot P_{\\text{elèctr}} \\cdot t = 1975 \\, \\text{kWh} \\Rightarrow \\text{cost} = E_{\\text{elèctr}} \\cdot c = 162{,}8 \\, \\text{€}
+\\]
+<br>
+<strong>c) Pressió mitjana de funcionament \\(p\\):</strong>
+<br>
+\\[
+P_{\\text{h}} = \\frac{W}{t} = p \\cdot q = p \\cdot \\frac{V}{t} \\Rightarrow p = \\frac{W}{V} = \\frac{4977 \\cdot 10^6}{2540} = 19{,}60 \\cdot 10^5 \\, \\text{Pa} = 19{,}60 \\, \\text{bar}
+\\]
+            <br><br>
+            `
+    },
+     {
+        type: "exercicis",
+        category: "materials",
+        text: `
+        <img src="https://pdieguez4.github.io/tecno/selectivitat/2015/imatges/imatgePreguntaE9.png" alt="Imatge relacionada amb la pregunta" width="900">
+        Les planxes d’acer A i B de la figura tenen un gruix e = 5 mm i una amplària b = 2 m.
+S’uneixen mitjançant cargols M10, que, collats d’una manera adequada, proporcionen una
+força de compressió de les planxes Fc = 32 kN. La unió de les planxes es produeix per la força
+de fricció que hi ha entre aquestes a causa de la compressió que hi exerceixen els cargols. El
+mòdul d’elasticitat de l’acer és E = 210 GPa i la unió ha d’aguantar una força distribuïda uniformement de F = 60 kN/m. Determineu:
+              
+               <br><strong>a)</strong> El nombre de cargols que cal posar-hi. [1 punt]
+               <br><strong>b)</strong> La tensió normal σ de les planxes. [1 punt]
+               <br><strong>c)</strong> La deformació longitudinal unitària ε de les planxes causada per la força F. [0,5 punts]
 
-            <strong>b) Massa de la placa:</strong>
-            <br>
-            \\[
-            V = (2L) \\cdot L \\cdot e = 2 \\cdot 1 \\cdot 0,005 = 0,01 \\; \\text{m}^3
-            \\]
-            \\[
-            m = ρV = 2710 \\cdot 0,01 = 27,1 \\; \\text{kg}
-            \\]
-            \\[
-            W = mg = 27,1 \\cdot 9,98 = 265,8 \\; \\text{N}
-            \\]
-            <br>
-            <strong>c) Tensió del cable i forces a O:</strong>
-            <br>
-            \\[
-            T \\text{sin}30º \\cdot 2L - W \\cdot L = 0
-            \\]
-            \\[
-            T \\cdot 0,5 \\cdot 2 - 265,8 = 0
-            \\]
-            \\[
-            T = 265,8 \\; \\text{N}
-            \\]
-            \\[
-            - Eix y
-            \\]
-            \\[
-            F_{v} + T \\text{sin}30º - W = 0
-            \\]
-            \\[
-            F_{v} + 132,9 - 265,8 = 0
-            \\]
-            \\[
-            F_{v} = 132,9 \\; \\text{N}
-            \\]
-            \\[
-            - Eix x
-            \\]
-            \\[
-            F_{h} - T \\text{sin}30º = 0
-            \\]
-            \\[
-            F_{h} = 265,8 \\cdot 0,866 = 230,2 \\; \\text{N}
-            \\]
-            <br>
-            <strong>d) Tensió normal i allargament unitari del cable:</strong>
-            <br>
-            \\[
-            A = \\frac{\\pi d^{2}}{4} = \\frac{\\pi (0,002)^{2}}{4} = 3,14 \\cdot 10^{-6} \\; \\text{m}^2
-            \\]
-            \\[
-            σ = \\frac{T}{A} = \\frac{265,8}{3,14 \\cdot 10^{-6}} = 84,6 \\; \\text{MPa}
-            \\]
-            \\[
-            ε = \\frac{σ}{E} = \\frac{84,6 \\cdot 10^{6}}{207 \\cdot 10^{7}} = 4,1 \\cdot 10^{-4}
-            \\]
-            \\[
-            σ = 84,6 \\; \\text{MPa} < 350 \\; \\text{MPa}
-            \\]
-            <strong>El cable NO es deforma permanentment</strong>
+               <br><br>
+               `, 
+        correctAnswer: "",  // No és necessari aquí perquè es tracta d'un exercici obert
+        steps: `
+            <strong>a) Força tangencial \\(F_{\\text{tan}}\\) i nombre de cargols:</strong>
+<br>
+\\[
+F_{\\text{tan}} = \\mu F_{\\text{c}} = 12{,}8 \\, \\text{kN} \\implies \\frac{F \\cdot b}{F_{\\text{tan}}} = \\frac{60 \\, \\text{kN/m} \\cdot 2 \\, \\text{m}}{12{,}8 \\, \\text{kN}} = 9{,}375 \\implies \\text{es necessiten 10 cargols}
+\\]
+<br>
+<strong>b) Tensió normal \\(\\sigma\\):</strong>
+<br>
+\\[
+\\sigma = \\frac{F \\cdot b}{e \\cdot b} = \\frac{F}{e} = \\frac{60 \\cdot 10^3}{5 \\cdot 10^{-3}} = 12 \\, \\text{MPa}
+\\]
+<br>
+<strong>c) Deformació unitària \\(\\varepsilon\\):</strong>
+<br>
+\\[
+\\varepsilon = \\frac{\\Delta l}{l} = \\frac{\\sigma}{E} = \\frac{12 \\cdot 10^6}{210 \\cdot 10^9} = 57{,}14 \\cdot 10^{-6}
+\\]
+            <br><br>
+            `
+    },
+    {
+        type: "exercicis",
+        category: "motors",
+        text: `
+        Un muntacàrregues és accionat per un motor reductor i un sistema de politges. El motor reductor és elèctric i té un rendiment ηmr = 0,65. El sistema de politges té un rendiment ηpol = 0,85 i proporciona una relació de transmissió entre la velocitat v de pujada de la càrrega, en m/s, i la rotació nmr de l’eix de sortida del motor reductor, en s–1, de τ = v/nmr = 0,9918 m. El motor s’alimenta amb una tensió U = 230 V i, en règim de funcionament nominal, consumeix una intensitat I = 6,4 A quan la càrrega puja a v = 0,4 m/s constant. Determineu:
+        
+        <br><strong>a)</strong> La potència Pmr i el parell Γmr a l’eix de sortida del motor reductor. [1 punt]
+        <br><strong>b)</strong> La massa m de la càrrega que està pujant. [1 punt]
+        <br><strong>c)</strong> El rendiment global ηtot del muntacàrregues. [0,5 punts]
+        
+        <br><br>
+        `, 
+        correctAnswer: "",  
+        steps: `
+            <strong>a) Potència \\(P_{\\text{m-r}}\\) i parell \\(\\Gamma_{\\text{m-r}}\\) a l'eix de sortida:</strong>
+<br>
+\\[
+P_{\\text{m-r}} = \\eta_{\\text{m-r}} P_{\\text{elèct}} = \\eta_{\\text{m-r}} U I = 956{,}8 \\, \\text{W}
+\\]
+\\[
+n_{\\text{m-r}} = \\frac{v}{\\tau} \\rightarrow \\Gamma_{\\text{m-r}} = \\frac{P_{\\text{m-r}}}{2 \\pi n_{\\text{m-r}}} = \\frac{P_{\\text{m-r}}}{2 \\pi \\frac{v}{\\tau}} = 377{,}6 \\, \\text{Nm}
+\\]
+<br>
+<strong>b) Massa \\(m\\) de la càrrega:</strong>
+<br>
+\\[
+P_{\\text{sortida}} = \\eta_{\\text{pol}} P_{\\text{m-r}} = mgv
+\\]
+\\[
+m = \\frac{\\eta_{\\text{pol}} P_{\\text{m-r}}}{g v} = \\frac{0{,}85 \\cdot 956{,}8}{9{,}807 \\cdot 0{,}4} = 207{,}3 \\, \\text{kg}
+\\]
+<br>
+<strong>c) Rendiment global \\(\\eta_{\\text{tot}}\\):</strong>
+<br>
+\\[
+\\eta_{\\text{tot}} = \\eta_{\\text{m-r}} \\cdot \\eta_{\\text{pol}} = 0{,}65 \\cdot 0{,}85 = 0{,}5525
+\\]
+            <br><br>
+            `
+    },
+     {
+        type: "exercicis",
+        category: "control",
+        text: `La divisió entera de dos nombres per 3 fa que es puguin escriure z1 = 3q1 + r1
+ i z2 = 3q2 + r2
+,
+on r1
+ i r2
+ s’anomenen residus i poden ser iguals a 0, 1 o 2. La suma dels dos nombres
+s = z1 + z2
+ pot ser múltiple de 3 o no. Responeu a les qüestions que hi ha a continuació utilitzant les variables d’estat següents:
+               <img src="https://pdieguez4.github.io/tecno/selectivitat/2015/imatges/imatgePreguntaE11.png" alt="Imatge relacionada amb la pregunta" width="900">
+              
+               <br><strong>a)</strong> Escriviu la taula de veritat del sistema i indiqueu els casos que no són possibles. [1 punt]
+               <br><strong>b)</strong> Determineu la funció lògica entre aquestes variables i, si escau, simplifiqueu-la.  [1 punt]
+               <br><strong>c)</strong> Dibuixeu l’esquema de contactes equivalent. [0,5 punts]
+               <br><br>
+               `, 
+        correctAnswer: "",  // No és necessari aquí perquè es tracta d'un exercici obert
+        steps: `
+            <img src="https://pdieguez4.github.io/tecno/selectivitat/2015/imatges/imatgeRespostaE11.png" alt="Imatge relacionada amb la resposta" width="900">`,  // Imatge opcional al final de la resposta
+    },
+     {
+        type: "exercicis", 
+        category: "energia",
+        text: `
+        <img src="https://pdieguez4.github.io/tecno/selectivitat/2015/imatges/imatgePreguntaE12.png" alt="Imatge relacionada amb la pregunta" width="900">
+        Una llanterna consta de tres LED connectats en paraŀlel. La caiguda de tensió de cada
+LED és ULED = 3,1 V. La llanterna es pot alimentar amb dues o tres bateries connectades en
+sèrie. Cada bateria proporciona una tensió Ubat = 3,7 V i té una capacitat cbat = 3 000 mAh.
+Entre les bateries i els LED hi ha una resistència R. Quan hi ha les tres bateries connectades,
+per cada LED hi passa un corrent ILED = 2 500 mA. Determineu:
+              
+               <br><strong>a)</strong> El valor de la resistència R. [0,5 punts]
+               <br><strong>b)</strong> L’energia consumida pel conjunt Etotal en el temps t = 0,5 h de funcionament quan les
+tres bateries estan connectades. [0,5 punts]
+               <br><strong>c)</strong> La intensitat ILED2 que circula per cada LED quan només hi ha dues bateries connectades. [0,5 punts]
+               <br><strong>d)</strong> El temps tbat que duren les bateries en cadascuna de les dues configuracions. [1 punt]
+               <br><br>
+               `, 
+        correctAnswer: "",  // No és necessari aquí perquè es tracta d'un exercici obert
+        steps: `
+            <strong>a) Càlcul de la resistència \\(R\\):</strong>
+<br>
+\\[
+3U_{\\text{bat}} - 3I_{\\text{led}} R - U_{\\text{led}} = 0 \\implies R = \\frac{3U_{\\text{bat}} - U_{\\text{led}}}{3I_{\\text{led}}} = 1{,}067 \\, \\Omega
+\\]
+<br>
+<strong>b) Energia total \\(E_{\\text{total}}\\):</strong>
+<br>
+\\[
+E_{\\text{total}} = \\left( R(3I_{\\text{led}})^2 + 3U_{\\text{led}} \\cdot I_{\\text{led}} \\right) t = 3U_{\\text{bat}} \\cdot 3I_{\\text{led}} \\cdot t = 149{,}9 \\, \\text{kJ} = 41{,}63 \\, \\text{Wh}
+\\]
+<br>
+<strong>c) Nova intensitat amb 2 bateries \\(I_{\\text{led2}}\\):</strong>
+<br>
+\\[
+2U_{\\text{bat}} - 3I_{\\text{led2}} R - U_{\\text{led}} = 0 \implies I_{\\text{led2}} = \\frac{2U_{\\text{bat}} - U_{\\text{led}}}{3R} = 1{,}344 \\, \\text{A}
+\\]
+<br>
+<strong>d) Temps de descàrrega \\(t_{\\text{bat}}\\):</strong>
+<br>
+\\[
+\\text{Amb 3 bateries: } t_{\\text{bat}} = \\frac{c_{\\text{bat}}}{3I_{\\text{led}}} = 0{,}4 \\, \\text{h}
+\\]
+\\[
+\\text{Amb 2 bateries: } t_{\\text{bat}} = \\frac{c_{\\text{bat}}}{3I_{\\text{led2}}} = 0{,}7441 \\, \\text{h}
+\\]
+            <br><br>
+            `
+    },
+     {
+        type: "exercicis",
+        category: "energia",
+        text: `
+        Una estufa de butà té una potència calorífica màxima Pmàx = 3,05 kW. El butà es distribueix liquat, en bombones que contenen una massa de butà mb = 12,5 kg i que tenen una
+forma aproximadament cilíndrica de diàmetre d = 300 mm i alçària h = 450 mm. El poder
+calorífic del butà és cb = 49,61 MJ/kg i té una densitat, abans del procés de liquació, de
+ρ = 2,52 kg/m3
+. Determineu:
+              
+               <br><strong>a)</strong> El consum c en kg/h, si funciona a la màxima potència. [0,5 punts]
+               <br><strong>b)</strong> La durada d’una bombona tb si funciona a la màxima potència. [0,5 punts]
+               <br><strong>c)</strong> La reducció de volum, en tant per cent, que experimenta el butà en el procés de liquació per a introduir-lo a la bombona. [0,5 punts]
+               Per a una potència de l’estufa 1 kW ≤ P ≤ 3,05 kW, dibuixeu:
+               <br><strong>d)</strong> El gràfic de la durada d’una bombona en hores, en funció de la potència P, indicant
+les escales. [1 punt]
+               <br><br>
+               `, 
+        correctAnswer: "",  // No és necessari aquí perquè es tracta d'un exercici obert
+       steps: `
+            <img src="https://pdieguez4.github.io/tecno/selectivitat/2015/imatges/imatgeRespostaE13.png" alt="Imatge relacionada amb la resposta" width="900">`,  // Imatge opcional al final de la resposta
+    },
+     {
+        type: "exercicis",
+        category: "control",
+        text: `<img src="https://pdieguez4.github.io/tecno/selectivitat/2015/imatges/imatgePreguntaE11.png" alt="Imatge relacionada amb la pregunta" width="900">La placa d’acer de la figura, de gruix e = 5 mm, està articulada en el punt O i es manté en
+repòs mitjançant el cable PQ de secció nominal s = 2,7 mm2.
+
+              
+               <br><strong>a)</strong> Dibuixeu el diagrama de cos lliure de la placa. [0,5 punts]
+               <br><strong>b)</strong> La massa m de la placa (ρacer = 7 850 kg/m3
+). [0,5 punts]
+               <br><strong>c)</strong> La força T que fa el cable i les forces vertical Fv
+ i horitzontal Fh
+ en l’articulació O.
+[1 punt]
+               <br><strong>d)</strong> La tensió normal σ del cable a causa de la força que fa. [0,5 punts]
+               <br><br>
+               `, 
+        correctAnswer: "",  // No és necessari aquí perquè es tracta d'un exercici obert
+        steps: `
+            <img src="https://pdieguez4.github.io/tecno/selectivitat/2015/imatges/imatgeRespostaE11.png" alt="Imatge relacionada amb la resposta" width="900">`,  // Imatge opcional al final de la resposta
+    },
+    {
+        type: "exercicis",
+        category: "motors",
+        text: `
+        Una porta de garatge enrotllable és accionada per un motor reductor de rendiment global ηtot = 0,33. El motor reductor està format per un motor elèctric de rendiment ηmotor = 0,83 i un reductor de relació de transmissió τ = ωs/ωe = 1/285. El motor s’alimenta amb una tensió U = 230 V i, en un instant concret, consumeix una intensitat I = 1,8 A quan la porta s’enrotlla a ns = 10 min–1 en un tambor de diàmetre d = 220 mm. Determineu:
+        
+        <br><strong>a)</strong> La potència Pmotor i el parell Γmotor a l’eix de sortida del motor. [1 punt]
+        <br><strong>b)</strong> La potència Ps i el parell Γs a l’eix del tambor (eix de sortida del reductor). [1 punt]
+        <br><strong>c)</strong> La massa màxima m que pot tenir la part que penja de la porta. [0,5 punts]
+        
+        <br><br>
+        `, 
+        correctAnswer: "",  
+        steps: `
+            <strong>a) Potència \\(P_{\\text{motor}}\\) i parell \\(\\Gamma_{\\text{motor}}\\) a l'eix de sortida del motor:</strong>
+<br>
+\\[
+P_{\\text{motor}} = \\eta_{\\text{motor}} P_{\\text{elect}} = \\eta_{\\text{motor}} U I = 343{,}6 \\, \\text{W}
+\\]
+\\[
+n_{\\text{motor}} = \\frac{n_{\\text{s}}}{\\tau} \\rightarrow \\Gamma_{\\text{motor}} = \\frac{P_{\\text{motor}}}{\\frac{2 \\pi}{60} n_{\\text{motor}}} = \\frac{P_{\\text{motor}}}{\\frac{2 \\pi}{60} \\frac{n_{\\text{s}}}{\\tau}} = 1{,}151 \\, \\text{Nm}
+\\]
+<br>
+<strong>b) Potència \\(P_{\\text{s}}\\) i parell \\(\\Gamma_{\\text{s}}\\) a l'eix del tambor:</strong>
+<br>
+\\[
+P_{\\text{s}} = \\eta_{\\text{tot}} P_{\\text{elect}} = \\eta_{\\text{tot}} U I = 136{,}6 \\, \\text{W}
+\\]
+\\[
+\\Gamma_{\\text{s}} = \\frac{P_{\\text{s}}}{\\frac{2 \\pi}{60} n_{\\text{s}}} = 130{,}5 \\, \\text{Nm}
+\\]
+<br>
+<strong>c) Massa màxima \\(m\\):</strong>
+<br>
+\\[
+\\Gamma_{\\text{s}} = m g \\frac{d}{2} \\Rightarrow m = \\frac{2 \\Gamma_{\\text{s}}}{g d} = 120{,}9 \\, \\text{kg}
+\\]
             <br><br>
             `
     },
 ];
+
