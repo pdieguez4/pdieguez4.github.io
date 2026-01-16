@@ -281,19 +281,18 @@ Quina és la tolerància per a $\\beta$?
     ],
     correctAnswer: "b",
     steps: `
-        D'acord amb la figura, l'angle $\\beta$ es calcula com la suma dels dos angles:
         \\[
         \\beta = \\alpha_1 + \\alpha_2
         \\]
-        Quan sumem (o restem) dimensions amb toleràncies, la tolerància del resultat és la suma de les toleràncies individuals per considerar el pitjor cas possible:
+
         \\[
         t_{\\beta} = t_{\\alpha_1} + t_{\\alpha_2}
         \\]
-        Substituint els valors:
+      
         \\[
         t_{\\beta} = 30' + 20' = 50'
         \\]
-        Per tant, la tolerància resultant és $\\pm 0^\\circ 50'$.
+    
         <br><br>
     `,
 },
